@@ -175,6 +175,21 @@
   ol.choices, ul.choices{padding-left:1.15rem; margin:.85rem 0;}
   ol.choices li, ul.choices li{margin:.45rem 0;}
 
+  .card-subtitle{font-family:'Big Shoulders Display'; font-weight:700; font-size:.9rem; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-soft); margin:1.1rem 0 .4rem;}
+  ul.places{list-style:none; padding:0; margin:.4rem 0 .9rem;}
+  ul.places li{margin:.55rem 0; padding-left:.85rem; border-left:2px solid var(--line);}
+
+  ul.timeline{list-style:none; padding:0; margin:.9rem 0 1.2rem;}
+  ul.timeline li{display:flex; gap:.9rem; align-items:baseline; padding:.42rem 0; border-bottom:1px solid var(--line);}
+  ul.timeline li:last-child{border-bottom:0;}
+  ul.timeline .t{
+    font-family:'Big Shoulders Display'; font-weight:700; font-size:.95rem;
+    color:var(--accent-strong); font-variant-numeric:tabular-nums;
+    flex:0 0 4.1rem; letter-spacing:.02em;
+  }
+  ul.timeline .ev{font-size:.95rem;}
+  .card--amber ul.timeline .t{color:var(--amber);}
+
   .divider{
     display:flex; align-items:center; gap:.8rem; margin:2.6rem 0 1.6rem; color:var(--ink-faint);
   }
@@ -225,7 +240,36 @@
     </svg>
     <h1>Tour de&nbsp;Chiemgau</h1>
     <p class="dates">15.&ndash;16. August 2026</p>
+    <div class="meta-row">
+      <div class="meta-item"><span class="lbl">Gesamt</span><span class="val">130&ndash;177&nbsp;km</span></div>
+      <div class="meta-item"><span class="lbl">Höhenmeter</span><span class="val">ca. 1.400&ndash;1.900&nbsp;m</span></div>
+      <div class="meta-item"><span class="lbl">Etappen</span><span class="val">2 Tage, 1 Übernachtung</span></div>
+      <div class="meta-item"><span class="lbl">Start &amp; Ziel</span><span class="val">München Hbf</span></div>
+    </div>
   </header>
+
+  <div class="card card--amber">
+    <span class="badge badge--amber">Vor der Abfahrt</span>
+    <h4 class="card-title">Das müssen wir noch gemeinsam entscheiden</h4>
+    <p>Vier offene Punkte &ndash; bitte in der Gruppe abstimmen, damit wir Samstag früh nicht am Bahnsteig diskutieren:</p>
+    <ol class="choices">
+      <li><strong>Wo steigen wir aus?</strong> Rosenheim (längere, sanftere Radetappe) oder Kufstein (kurz und gleich alpin).</li>
+      <li><strong>Welche Route zum Walchsee weiter nach Lofer?</strong> Direkt, über den Mozartradweg oder die lange Variante über den Pillersee.</li>
+      <li><strong>Abendessen in Lofer:</strong> selbst kochen oder essen gehen &ndash; wer essen gehen will, muss reservieren.</li>
+      <li><strong>Sonntag:</strong> Hirschbichl-Pass oder die flachere Talvariante.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <span class="badge badge--neutral">Vorbereitung</span>
+    <h4 class="card-title">Welches Rad &ndash; und was macht das Wetter?</h4>
+    <p>Wir sind teilweise mit dem Rennrad (Roman, Simon?) und teilweise mit Gravel unterwegs. Heißt: Wir sollten uns größtenteils auf asphaltierten Wegen bewegen.</p>
+    <ul class="places">
+      <li><strong>Rennrad, Samstag:</strong> Auf dem Mozartradweg (Option&nbsp;2) müssen wir auf die asphaltierte Straße ausweichen, statt den Schotter mitzunehmen.</li>
+      <li><strong>Gravel, Sonntag:</strong> Am Hirschbichl (Variante&nbsp;1) lassen sich die steilsten Rampen über die Waldumfahrung umgehen &ndash; das geht aber nur mit Gravel.</li>
+    </ul>
+    <div class="note"><span class="note-icon">⛈️</span><p><strong>Wetter im Blick behalten:</strong> August in den Alpen heißt Nachmittagsgewitter. Aktuell sieht es am Samstag sehr warm aus, am Sonntag etwas kühler, dafür nachmittags mit Regenwahrscheinlichkeit. Es lohnt sich, am Freitag und Samstagabend nochmal <a href="https://www.bergfex.at/lofer/wetter/prognose/">die Prognose für Lofer</a> anzuschauen.</p></div>
+  </div>
 
   <section class="day">
     <div class="day-head">
@@ -236,7 +280,17 @@
     <h3 class="stage-title">Anreise mit dem Zug</h3>
     <p class="lede">Wir treffen uns am Samstag am München Hbf. Ab dort kommen wir auf zwei Wegen zum Start: einmal über Rosenheim, einmal über Kufstein. Sucht euch aus, was euch lieber ist.</p>
 
-    <div class="note"><span class="note-icon">🗳️</span><p><strong>Noch zu entscheiden:</strong> Welchen Zug nehmen wir &ndash; Variante a) über Rosenheim oder Variante b) über Kufstein? Bitte in der Gruppe abstimmen.</p></div>
+    <div class="card">
+      <span class="badge badge--neutral">Tickets</span>
+      <h4 class="card-title">Fahrkarten &amp; Fahrradmitnahme</h4>
+      <ul class="places">
+        <li><strong>Deutschlandticket:</strong> Die meisten von uns haben eins &ndash; das reicht für beide Tage. Auch bis <strong>Kufstein</strong>, weil das ein tarifintegrierter Grenzbahnhof ist. Nur für Fahrten innerhalb Österreichs gilt es nicht, aber die haben wir nicht vor.</li>
+        <li><strong>Ohne Deutschlandticket:</strong> Am besten zu einem <strong>Bayern-Ticket</strong> zusammentun (ab 29&nbsp;&euro; für die erste Person, je 9&nbsp;&euro; für jede weitere, maximal 5 Personen pro Ticket) &ndash; oder einfach Einzelfahrten lösen.</li>
+        <li><strong>Fahrrad, Hinfahrt:</strong> Rosenheim und Kufstein liegen seit Ende 2023 im MVV-Verbundgebiet (Zone&nbsp;7 bzw. 11). Es reicht also die <a href="https://www.mvv-muenchen.de/tickets-abos-preise/fahrrad-tageskarte/">MVV-Fahrrad-Tageskarte</a> für <strong>3,70&nbsp;&euro;</strong>.</li>
+        <li><strong>Fahrrad, Rückfahrt:</strong> Freilassing liegt <em>außerhalb</em> des MVV. Für Sonntag braucht ihr deshalb die <a href="https://www.bahn.de/angebot/zusatzticket/fahrrad/tageskarte-bayern">Fahrrad-Tageskarte Bayern</a> für <strong>7,50&nbsp;&euro;</strong> pro Rad.</li>
+      </ul>
+      <p>Das Fahrradticket ist im Deutschlandticket <em>nicht</em> enthalten, das braucht jeder zusätzlich.</p>
+    </div>
 
     <h3 class="option-title">Variante a) über Rosenheim</h3>
     <span class="badge badge--neutral">Zug &middot; ca. 43&ndash;48&nbsp;min</span>
@@ -301,24 +355,47 @@
       <div class="stat"><span class="num">640<span class="unit">m</span></span><span class="lbl">&darr; Abstieg</span></div>
     </div>
     <div class="frame"><iframe src="https://www.komoot.com/tour/3185438549/embed?share_token=aJcBvgZdLGMAIjvbm38IbFJl3cbYalw8fQgy9rCfq2vu7Oiq1p&amp;hl=de&amp;layout=classic&amp;profile=1" width="100%" height="700" scrolling="no" title="Komoot-Route Walchsee nach Lofer, über St. Johann und Pillersee"></iframe></div>
+    <h4 class="card-subtitle">Zeitplan-Vorschlag für den Samstag</h4>
+    <p>Option Rosenheim:</p>
+    <ul class="timeline">
+      <li><span class="t">08:30</span><span class="ev"><strong>Treffpunkt</strong> am Holzkirchner Flügelbahnhof, München Hbf Gleis 5&ndash;10</span></li>
+      <li><span class="t">08:43</span><span class="ev">RE5 ab München &rarr; an Rosenheim 09:26</span></li>
+    </ul>
+    <p>Ab Rosenheim geht's dann mit dem Rad weiter zum Walchsee.</p>
+    <ul class="timeline">
+      <li><span class="t">ca. 12:00</span><span class="ev">Alle am Walchsee &ndash; Baden, Brotzeit, Füße hochlegen</span></li>
+      <li><span class="t">ca. 13:15</span><span class="ev">Weiterfahrt nach Lofer</span></li>
+      <li><span class="t">17:00&ndash;18:00</span><span class="ev">Ankunft Lofer, je nach gewählter Route</span></li>
+      <li><span class="t">20:00</span><span class="ev">Abendessen</span></li>
+    </ul>
 
     <div class="card">
       <span class="badge">Unterkunft</span>
       <h4 class="card-title">Haus Alpenblick, Lofer</h4>
       <p>Übernachten tun wir im Haus Alpenblick, liegt etwas außerhalb von Lofer, aber man ist schnell in der Stadt.</p>
+      <div class="note"><span class="note-icon">❓</span><p><strong>Noch offen:</strong> Check-in-Zeit, wo wir die Räder über Nacht sicher unterstellen.</p></div>
       <div class="frame"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93068.96838323816!2d12.629779718929967!3d47.58430549437075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4776f622c3eadcff%3A0x4e04d52e90fdf030!2sFerienhaus%20Alpenblick%20in%20Lofer!5e1!3m2!1sde!2sde!4v1786546117360!5m2!1sde!2sde" width="100%" height="380" style="border:0;" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Lage Haus Alpenblick in Lofer"></iframe></div>
     </div>
 
     <div class="card card--amber">
       <span class="badge badge--amber">Verpflegung</span>
       <h4 class="card-title">Essen &amp; Einkaufen in Lofer</h4>
-      <p>Kleines Problem: Samstag ist Maria Himmelfahrt, also Feiertag in Bayern und Österreich. Die Supermärkte in Lofer haben da nur bis 13&nbsp;Uhr auf &ndash; für uns leider zu früh. Ich seh zwei Möglichkeiten:</p>
+      <p>Kleines Problem: Samstag ist Maria Himmelfahrt, also Feiertag in Bayern und Österreich. Die Supermärkte in Lofer haben da nur bis 13&nbsp;Uhr auf &ndash; für uns leider zu früh. Sonntag sollten sie dann ab 09:00 Uhr offen sein. Ich seh zwei Möglichkeiten:</p>
       <ol class="choices">
         <li><strong>Selbst einkaufen und kochen:</strong> Wir kaufen schon in München ein und verteilen das Zeug auf die Räder, dann kochen wir abends zusammen. Vorteil: gemütliches Kochen in großer Runde. Nachteil: Wir schleppen das den ganzen Tag mit uns rum und der Speiseplan ist auf hitzefestes Essen limitiert.</li>
-        <li><strong>Abends essen gehen in Lofer:</strong> Von der <a href="https://maps.app.goo.gl/r2EoyWKSF5ASw19C6">Brasserie</a> bis zum <a href="https://www.hotel-lofer.com/images/317_Speisekarte_NEU.pdf">Wirtshaus</a> ist einiges dabei &ndash; da wird sich schon was Passendes finden.</li>
+        <li><strong>Abends essen gehen in Lofer:</strong> Der Ort ist klein, aber es gibt genug Auswahl &ndash; siehe die Liste unten.</li>
       </ol>
       <div class="note"><span class="note-icon">🗳️</span><p><strong>Noch zu entscheiden:</strong> Selbst kochen (Zutaten mitnehmen) oder abends essen gehen? Bitte in der Gruppe abstimmen.</p></div>
+      <h5 class="card-subtitle">Wo wir essen gehen könnten</h5>
+      <ul class="places">
+        <li><strong><a href="https://www.gasthof-lofer.com/de/restaurant/">Forellenstube im Gasthaus Lofer</a></strong> &ndash; klassisches Wirtshaus, Spezialität sind Forellen aus der Region. Warme Küche 17:30&ndash;20:30&nbsp;Uhr, Samstag offen (Ruhetage Di/Mi). Kartenzahlung erst ab 50&nbsp;&euro;, also Bargeld einstecken. Tel. <a href="tel:+4365888377">+43 6588 8377</a></li>
+        <li><strong><a href="https://www.hotel-lofer.com/de/restaurant-speisekarte">Wirtshaus Zum Schweizer</a></strong> &ndash; solide österreichische Küche mit Terrasse und Blick auf die Loferer Steinberge, auch was Vegetarisches dabei (<a href="https://www.hotel-lofer.com/images/317_Speisekarte_NEU.pdf">Speisekarte als PDF</a>). Warme Küche durchgehend 11:30&ndash;20:30&nbsp;Uhr, nur Dienstag Ruhetag. Tel. <a href="tel:+4365888238">+43 6588 8238</a></li>
+        <li><strong><a href="https://www.neuwirt-lofer.com/landgasthof-saalachtal/restaurant-lofer">Landgasthof Neuwirt</a></strong> &ndash; etwas gehobener, alpine Küche und Salzburger Klassiker, gutes Bier. Samstag ab 14&nbsp;Uhr bis 21&nbsp;Uhr, Reservierung online oder Tel. <a href="tel:+4365888315">+43 6588 8315</a></li>
+        <li><strong><a href="https://www.amplatzl.at/">Am Platzl</a></strong> &ndash; Italienisch trifft Regionales, mitten im Ort, gute Pizza. Samstag ab 17&nbsp;Uhr, <em>nur Barzahlung</em>. Tel. <a href="tel:+436641155461">+43 664 1155461</a></li>
+        <li><strong><a href="https://maps.app.goo.gl/r2EoyWKSF5ASw19C6">Brasserie Kramerei</a></strong> &ndash; genau genommen eher Bar als Restaurant, aber im Sommer durchgehend von 11&nbsp;bis 24&nbsp;Uhr offen. Der Platz für ein Bier danach.</li>
+      </ul>
       <p>Frühstück gibt's dann entweder in der <a href="https://maps.app.goo.gl/WYrJ8snpd4BK9KBeA">örtlichen Bäckerei</a> oder im <a href="https://maps.app.goo.gl/Ey8H8Tm2sgGuTbBB9">Café Dankl</a>.</p>
+      <p>Falls jemand die 13-Uhr-Angabe nochmal gegenchecken mag: SPAR Lofer, <a href="tel:+43658820006">+43 6588 20006</a>.</p>
     </div>
   </section>
 
@@ -331,11 +408,11 @@
     </div>
 
     <h3 class="stage-title">Über den Königssee</h3>
-    <p class="lede">Nach dem Frühstück geht's weiter Richtung Königssee und Salzburg. Ich hab dafür zwei Routen zusammengebastelt.</p>
+    <p class="lede">Nach dem Frühstück geht's los Richtung Königssee und Salzburg. Ich hab dafür zwei Routen zusammengebastelt.</p>
 
     <h3 class="option-title">Variante 1 &ndash; über den Hirschbichl-Pass</h3>
     <span class="badge">Rad &middot; steil, autofrei</span>
-    <p>Der Hirschbichl ist eine autofreie Forststraße, da fährt nur der Linienbus &ndash; dafür ist die ziemlich steil (angeblich bis zu 30&nbsp;% an manchen Stellen). Laut <a href="https://www.quaeldich.de/paesse/hirschbichl/#auffahrten">Quäldich</a> zwar heftig, aber mit dem Rennrad machbar. Und laut einem Kumpel kann man die 30-%-Rampe mit dem Gravelbike auch durch den Wald umfahren. Dafür bekommen wir auf dem Pass (1152&nbsp;m) die Loferer Steinberge nochmal von der anderen Seite zu sehen und blicken hinüber zur Reiter Alm, einem großen Bergplateau. Auf der Abfahrt geht's mitten ins Berchtesgadener Land hinein, wo schon bald der Watzmann (2713&nbsp;m) &ndash; Deutschlands dritthöchster Berg und das Postkartenmotiv der Region &ndash; über den Baumwipfeln auftaucht.</p>
+    <p>Der Hirschbichl ist eine autofreie Forststraße, da fährt nur ein Linienbus &ndash; dafür ist die Straße ziemlich steil (angeblich bis zu 30&nbsp;% an manchen Stellen). Laut <a href="https://www.quaeldich.de/paesse/hirschbichl/#auffahrten">Quäldich</a> zwar heftig, aber mit dem Rennrad machbar. Und laut einem Kumpel kann man die 30-%-Rampe mit dem Gravelbike auch durch den Wald umfahren. Dafür bekommen wir auf dem Pass (1152&nbsp;m) die Loferer Steinberge nochmal von der anderen Seite zu sehen und blicken hinüber zur Reiter Alm, einem großen Bergplateau. Auf der Abfahrt geht's mitten ins Berchtesgadener Land hinein, wo schon bald der Watzmann (2713&nbsp;m) &ndash; Deutschlands dritthöchster Berg und das Postkartenmotiv der Region &ndash; über den Baumwipfeln auftaucht.</p>
     <div class="stat-row">
       <div class="stat"><span class="num">73,7<span class="unit">km</span></span><span class="lbl">bis Freilassing</span></div>
       <div class="stat"><span class="num">3:20<span class="unit">h</span></span><span class="lbl">Fahrzeit</span></div>
@@ -346,7 +423,7 @@
 
     <h3 class="option-title">Variante 2 &ndash; entlang der Bundesstraße</h3>
     <span class="badge">Rad &middot; flacher, mehr Verkehr</span>
-    <p>Die Alternative läuft an der Bundesstraße entlang und bleibt dabei im Tal der Saalach, mit der Reiter Alm links und den Loferer Steinbergen im Rückspiegel &ndash; dafür deutlich flacher, dafür halt mehr Autos, was sich Sonntagvormittag aber wahrscheinlich in Grenzen hält. Gleiche Fahrzeit wie über den Hirschbichl, aber rund 100&nbsp;Höhenmeter weniger im Anstieg, und der Watzmann zeigt sich erst kurz vor Berchtesgaden.</p>
+    <p>Die Alternative läuft an der Bundesstraße entlang und bleibt dabei im Tal der Saalach, mit der Reiter Alm links und den Loferer Steinbergen im Rückspiegel &ndash; deutlich flacher, dafür halt mehr Autos, was sich Sonntagvormittag aber wahrscheinlich in Grenzen hält. Gleiche Fahrzeit wie über den Hirschbichl, aber rund 100&nbsp;Höhenmeter weniger im Anstieg, und der Watzmann zeigt sich erst kurz vor Berchtesgaden.</p>
     <div class="stat-row">
       <div class="stat"><span class="num">75,6<span class="unit">km</span></span><span class="lbl">bis Freilassing</span></div>
       <div class="stat"><span class="num">3:20<span class="unit">h</span></span><span class="lbl">Fahrzeit</span></div>
@@ -357,7 +434,7 @@
 
     <h3 class="stage-title">Königssee, Berchtesgaden &amp; Salzburg</h3>
     <p>Beide Routen treffen sich am Königssee, direkt am Fuß des Watzmanns. Da können wir uns, wenn wir Bock haben, unter die Touristenmassen mischen und einmal in den See hüpfen &ndash; das smaragdgrüne Wasser und die Kulisse sind schon beeindruckend, auch wenn's touristisch ist. Die berühmte Kirche St.&nbsp;Bartholomä mit den roten Zwiebeltürmen liegt allerdings nur per Boot erreichbar auf der anderen Seite des Sees. Mehr gibt's da meiner Meinung nach aber auch nicht zu sehen.</p>
-    <p>Von dort geht's weiter nach Berchtesgaden und zurück Richtung Österreich. Wir kommen am Obersalzberg vorbei &ndash; heute vor allem bekannt für seine Aussicht, historisch als Hitlers Rückzugsort &ndash; und an der Roßfeld Panoramastraße, die sich oberhalb von uns entlang der Grenze schlängelt. Danach folgen wir mehr oder weniger der Berchtesgadener Ache Richtung Salzburg, während der Untersberg &ndash; der Hausberg von Salzburg, an dem der Sage nach Kaiser Karl der Große schlafen soll &ndash; langsam vor uns aufwächst.</p>
+    <p>Von dort geht's weiter nach Berchtesgaden und zurück Richtung Österreich. Wir kommen am Obersalzberg vorbei und an der Roßfeld Panoramastraße, die sich oberhalb von uns entlang der Grenze schlängelt. Danach folgen wir mehr oder weniger der Berchtesgadener Ache Richtung Salzburg, während der Untersberg &ndash; der Hausberg von Salzburg &ndash; langsam vor uns aufwächst.</p>
     <p>Auf dem Weg nach Salzburg können wir noch kurz beim Almkanal vorbeischauen &ndash; ein künstlicher Kanal, in dem die Salzburger floaten und baden gehen, quasi ihr Eisbach. Achtung, das Wasser ist eiskalt!</p>
     <p>Und dann sind wir auch schon in Salzburg. Da können wir nochmal auftanken, Zucker und Akku, und einfach die Seele baumeln lassen.</p>
 
@@ -365,8 +442,22 @@
     <p>Ich würd vorschlagen, wir fahren von hier noch über die Grenze und steigen erst in Freilassing in die Regio. Spart uns die Grenzkontrolle und ein bisschen Nerven. Und in Freilassing haben wir dann noch nen leeren Zug und müssen uns nicht mit halb Salzburg um die Fahrradplätze streiten.</p>
 
     <span class="badge badge--neutral">Zug &middot; ca. 1:45&ndash;1:57&nbsp;h</span>
-    <p>Von Freilassing geht's mit dem RE5 direkt zurück nach München Hbf, einmal pro Stunde:</p>
+    <p>Von Freilassing geht's mit dem RE5 direkt zurück nach München Hbf, einmal pro Stunde jeweils um&nbsp;:24:</p>
     <img class="plan" src="attachments/db-freilassing-muenchen.png" alt="DB-Fahrplan Freilassing nach München Hbf, RE5, Fahrzeit ca. 1 Stunde 45 bis 1 Stunde 57 Minuten">
+
+    <h4 class="card-subtitle">Zeitplan-Vorschlag für den Sonntag</h4>
+    <p>Am Sonntag steht einiges auf dem Programm und am Nachmittag vielleicht sogar Regen. Zu den 3:20&nbsp;h reiner Fahrzeit kommen noch Königssee, Almkanal und Salzburg &ndash; realistisch sind das mit Pausen acht bis neun Stunden. Damit das aufgeht, sollten wir früh los.</p>
+    <ul class="timeline">
+      <li><span class="t">08:00</span><span class="ev">Frühstück in Lofer</span></li>
+      <li><span class="t">09:00</span><span class="ev">Abfahrt</span></li>
+      <li><span class="t">ca. 12:30</span><span class="ev">Königssee: Mittagspause</span></li>
+      <li><span class="t">ca. 14:00</span><span class="ev">Weiter über Berchtesgaden und den Obersalzberg</span></li>
+      <li><span class="t">ca. 16:00</span><span class="ev">Almkanal &ndash; kurzer Stopp, das Wasser ist eiskalt</span></li>
+      <li><span class="t">ca. 17:00</span><span class="ev">Salzburg: auftanken, Seele baumeln lassen</span></li>
+      <li><span class="t">ca. 18:00</span><span class="ev">Letzte Kilometer über die Grenze nach Freilassing</span></li>
+      <li><span class="t">18:24</span><span class="ev">RE5 ab Freilassing &rarr; an München Hbf 20:20</span></li>
+    </ul>
+    <p>Der <strong>18:24</strong> ist der Zug, auf den wir hinarbeiten. Wenn's gut läuft, geht auch der <strong>17:24</strong> (an München 19:09) &ndash; dann müsste Salzburg aber kürzer ausfallen. Und falls wir uns verplaudern: Der <strong>19:24</strong> (an 21:21) ist das Sicherheitsnetz.</p>
   </section>
 
   <div class="divider"><span class="line"></span><span class="label">Packliste</span><span class="line"></span></div>
@@ -387,6 +478,8 @@
         <li><label><input type="checkbox" data-key="gemeinsam-abendessen"><span class="txt">ggf. Zutaten fürs Abendessen</span></label></li>
         <li><label><input type="checkbox" data-key="gemeinsam-fruehstueck"><span class="txt">ggf. Frühstück</span></label></li>
         <li><label><input type="checkbox" data-key="gemeinsam-erste-hilfe"><span class="txt">Erste-Hilfe-Kit (Roman)</span></label></li>
+        <li><label><input type="checkbox" data-key="gemeinsam-luftpumpe"><span class="txt">Luftpumpe (1&ndash;2 reichen für die Gruppe)</span></label></li>
+        <li><label><input type="checkbox" data-key="gemeinsam-werkzeug"><span class="txt">Multitool &amp; Reifenheber</span></label></li>
         <li><label><input type="checkbox" data-key="gemeinsam-kartenspiele"><span class="txt">Kartenspiele</span></label></li>
       </ul>
     </div>
@@ -397,6 +490,11 @@
       <p class="checklist-progress" data-progress-for="jeder"></p>
       <ul class="checklist" data-list="jeder">
         <li><label><input type="checkbox" data-key="jeder-sonnencreme"><span class="txt">Sonnencreme</span></label></li>
+        <li><label><input type="checkbox" data-key="jeder-helm"><span class="txt">Helm</span></label></li>
+        <li><label><input type="checkbox" data-key="jeder-schlauch"><span class="txt">Ersatzschlauch (passend zu <em>deinem</em> Rad) &amp; Flickzeug</span></label></li>
+        <li><label><input type="checkbox" data-key="jeder-handtuch"><span class="txt">Handtuch (wir haben drei Badestopps eingeplant)</span></label></li>
+        <li><label><input type="checkbox" data-key="jeder-powerbank"><span class="txt">Powerbank &amp; Ladekabel (Navigation frisst Akku)</span></label></li>
+        <li><label><input type="checkbox" data-key="jeder-licht"><span class="txt">Fahrradlicht (Sonntag kann's spät werden)</span></label></li>
         <li><label><input type="checkbox" data-key="jeder-ausweis"><span class="txt">Ausweis (Achtung Grenzkontrollen)</span></label></li>
         <li><label><input type="checkbox" data-key="jeder-regenjacke"><span class="txt">ggf. Regenjacke</span></label></li>
         <li><label><input type="checkbox" data-key="jeder-badesachen"><span class="txt">Badesachen</span></label></li>
