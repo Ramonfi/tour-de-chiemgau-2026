@@ -60,7 +60,7 @@
   }
 
   *{box-sizing:border-box;}
-  html{-webkit-text-size-adjust:100%;}
+  html{-webkit-text-size-adjust:100%;color-scheme:light dark;}
   body{
     margin:0;
     background:var(--bg);
@@ -169,7 +169,8 @@
     margin:1.05rem 0; box-shadow:var(--shadow);
   }
   .frame iframe{display:block; width:100%; border:0;}
-  img.plan{width:100%; display:block; border-radius:10px; border:1px solid var(--line); margin:.9rem 0 1.05rem; box-shadow:var(--shadow);}
+  .frame iframe[src*="komoot.com"]{height:clamp(32rem,80vh,43.75rem);}
+  img.plan{width:100%; height:auto; display:block; border-radius:10px; border:1px solid var(--line); margin:.9rem 0 1.05rem; box-shadow:var(--shadow);}
   .caption{font-family:'Big Shoulders Display'; font-weight:700; font-size:.68rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-faint); margin:-.5rem 0 .9rem;}
 
   ol.choices, ul.choices{padding-left:1.15rem; margin:.85rem 0;}
@@ -221,11 +222,15 @@
   .checklist input[type="checkbox"]::before{content:""; width:.7rem; height:.7rem; transform:scale(0); box-shadow:inset 1em 1em var(--accent); clip-path:polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);}
   .checklist input[type="checkbox"]:checked{border-color:var(--accent);}
   .checklist input[type="checkbox"]:checked::before{transform:scale(1);}
+  .checklist input[type="checkbox"]:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
   .checklist label span.txt{transition:color .15s ease, opacity .15s ease;}
   .checklist input[type="checkbox"]:checked ~ span.txt{color:var(--ink-faint); text-decoration:line-through; opacity:.75;}
   .checklist-progress{font-family:'Big Shoulders Display'; font-weight:700; font-size:.72rem; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-faint); margin:-.2rem 0 .5rem;}
   .checklist-reset{background:none; border:none; font-family:'Source Serif 4',Georgia,serif; font-size:.85rem; color:var(--ink-faint); text-decoration:underline; text-underline-offset:2px; cursor:pointer; padding:0; margin-top:.9rem;}
   .checklist-reset:hover{color:var(--ink);}
+  @media (max-width:520px){
+    .frame iframe[src*="komoot.com"]{height:70vh; min-height:28rem;}
+  }
 </style>
 </head>
 <body>
@@ -295,7 +300,7 @@
     <h3 class="option-title">Variante a) über Rosenheim</h3>
     <span class="badge badge--neutral">Zug &middot; ca. 43&ndash;48&nbsp;min</span>
     <p>Nach Rosenheim gibt's etwa einmal pro Stunde Direktverbindungen mit der RB54 oder RE5 ab München Hbf, wir wären also etwas flexibler:</p>
-    <img class="plan" src="attachments/db-muenchen-rosenheim.png" alt="DB-Fahrplan München Hbf nach Rosenheim, RB54 und RE5, Fahrzeit 43 bis 48 Minuten">
+    <img class="plan" src="assets/images/db-muenchen-rosenheim.png" alt="DB-Fahrplan München Hbf nach Rosenheim, RB54 und RE5, Fahrzeit 43 bis 48 Minuten" width="2378" height="1388" loading="lazy" decoding="async">
     <p>Ab Rosenheim schwingen wir uns aufs Rad und radeln durch das sanfte Hügelland des Chiemgaus in Richtung Berge. Rechts blitzt kurz der Chiemsee zwischen den Hügeln durch, dann geht's stetig bergan am Fuß des Geigelstein (1808&nbsp;m) vorbei &ndash; dem Hausberg der Chiemgauer Alpen &ndash;, bevor wir nach gut zwei Stunden am Walchsee ankommen.</p>
     <div class="stat-row">
       <div class="stat"><span class="num">43,2<span class="unit">km</span></span><span class="lbl">Distanz</span></div>
@@ -303,12 +308,12 @@
       <div class="stat"><span class="num">510<span class="unit">m</span></span><span class="lbl">&uarr; Anstieg</span></div>
       <div class="stat"><span class="num">310<span class="unit">m</span></span><span class="lbl">&darr; Abstieg</span></div>
     </div>
-    <div class="frame"><iframe src="https://www.komoot.com/tour/3193470915/embed?share_token=aht3hbB4EvBnN7lweGdD0qUlW7Dp46mv1x5K3qc571ObSsZniP&amp;hl=de&amp;layout=classic&amp;profile=1" width="100%" height="700" scrolling="no" title="Komoot-Route Rosenheim nach Walchsee"></iframe></div>
+    <div class="frame"><iframe src="https://www.komoot.com/tour/3193470915/embed?share_token=aht3hbB4EvBnN7lweGdD0qUlW7Dp46mv1x5K3qc571ObSsZniP&amp;hl=de&amp;layout=classic&amp;profile=1" width="736" height="700" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Komoot-Route Rosenheim nach Walchsee"></iframe></div>
 
     <h3 class="option-title">Variante b) über Kufstein</h3>
     <span class="badge badge--neutral">Zug &middot; ca. 1:21&ndash;1:55&nbsp;h</span>
     <p>Nach Kufstein gibt es nur etwa alle 2&nbsp;h eine Direktverbindung mit der RB54 &ndash; die Fahrt dauert dann rund 1:30&nbsp;h:</p>
-    <img class="plan" src="attachments/db-muenchen-kufstein.png" alt="DB-Fahrplan München Hbf nach Kufstein, RB54, Fahrzeit 1 Stunde 21 bis 1 Stunde 55 Minuten">
+    <img class="plan" src="assets/images/db-muenchen-kufstein.png" alt="DB-Fahrplan München Hbf nach Kufstein, RB54, Fahrzeit 1 Stunde 21 bis 1 Stunde 55 Minuten" width="2328" height="986" loading="lazy" decoding="async">
     <p>Von Kufstein aus ist's mit dem Rad deutlich kürzer und bereits deutlich alpiner bis zum Walchsee. Wir fahren fast die ganze Zeit direkt am Fuß des Kaisergebirges entlang &ndash; dem markanten, schroffen Kalkstock aus Wildem und Zahmem Kaiser, der über Kufstein und Ebbs aufragt. Wer noch nie in den Alpen war, bekommt hier gleich das volle Programm an Steilwänden zu sehen. Wir brauchen nur eine gute Stunde. Dafür sind die Zugzeiten weniger flexibel.</p>
     <div class="stat-row">
       <div class="stat"><span class="num">18,8<span class="unit">km</span></span><span class="lbl">Distanz</span></div>
@@ -316,7 +321,7 @@
       <div class="stat"><span class="num">230<span class="unit">m</span></span><span class="lbl">&uarr; Anstieg</span></div>
       <div class="stat"><span class="num">60<span class="unit">m</span></span><span class="lbl">&darr; Abstieg</span></div>
     </div>
-    <div class="frame"><iframe src="https://www.komoot.com/tour/3185431425/embed?share_token=alrhqcwBzM6AURcJ6mGDNVl0WEGjSobhlj2fA4iu47AbEVqMVe&amp;hl=de&amp;layout=classic&amp;profile=1" width="100%" height="700" scrolling="no" title="Komoot-Route Kufstein nach Walchsee"></iframe></div>
+    <div class="frame"><iframe src="https://www.komoot.com/tour/3185431425/embed?share_token=alrhqcwBzM6AURcJ6mGDNVl0WEGjSobhlj2fA4iu47AbEVqMVe&amp;hl=de&amp;layout=classic&amp;profile=1" width="736" height="700" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Komoot-Route Kufstein nach Walchsee"></iframe></div>
 
     <p>Von beiden Bahnhöfen aus kommen wir entspannt und malerisch zum Walchsee, sodass wir so gegen Mittag (ca. 12&nbsp;Uhr) dort aufschlagen und einen kleinen Bade- und/oder Lunch-Stop machen können.</p>
 
@@ -332,7 +337,7 @@
       <div class="stat"><span class="num">320<span class="unit">m</span></span><span class="lbl">&uarr; Anstieg</span></div>
       <div class="stat"><span class="num">350<span class="unit">m</span></span><span class="lbl">&darr; Abstieg</span></div>
     </div>
-    <div class="frame"><iframe src="https://www.komoot.com/tour/3187285897/embed?share_token=aq0et45ufHujv7I8yieBHokPTjmYznhtum9ifDUQSYZayP6NLP&amp;hl=de&amp;layout=classic&amp;profile=1" width="100%" height="700" scrolling="no" title="Komoot-Route Walchsee nach Lofer, direkt"></iframe></div>
+    <div class="frame"><iframe src="https://www.komoot.com/tour/3187285897/embed?share_token=aq0et45ufHujv7I8yieBHokPTjmYznhtum9ifDUQSYZayP6NLP&amp;hl=de&amp;layout=classic&amp;profile=1" width="736" height="700" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Komoot-Route Walchsee nach Lofer, direkt"></iframe></div>
 
     <h3 class="option-title">Option 2 &ndash; Seitental über den Mozart Radweg</h3>
     <span class="badge">Rad &middot; teils unbefestigt</span>
@@ -343,7 +348,7 @@
       <div class="stat"><span class="num">420<span class="unit">m</span></span><span class="lbl">&uarr; Anstieg</span></div>
       <div class="stat"><span class="num">450<span class="unit">m</span></span><span class="lbl">&darr; Abstieg</span></div>
     </div>
-    <div class="frame"><iframe src="https://www.komoot.com/tour/3185453254/embed?share_token=avKlv76Fn18FNntflGuC1KarwulnEczyUo5068NmLNautrkMr1&amp;hl=de&amp;layout=classic&amp;profile=1" width="100%" height="700" scrolling="no" title="Komoot-Route Walchsee nach Lofer, über Griesnau"></iframe></div>
+    <div class="frame"><iframe src="https://www.komoot.com/tour/3185453254/embed?share_token=avKlv76Fn18FNntflGuC1KarwulnEczyUo5068NmLNautrkMr1&amp;hl=de&amp;layout=classic&amp;profile=1" width="736" height="700" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Komoot-Route Walchsee nach Lofer, über Griesnau"></iframe></div>
 
     <h3 class="option-title">Option 3 &ndash; die malerische Variante</h3>
     <span class="badge">Rad &middot; längste Etappe</span>
@@ -354,18 +359,26 @@
       <div class="stat"><span class="num">610<span class="unit">m</span></span><span class="lbl">&uarr; Anstieg</span></div>
       <div class="stat"><span class="num">640<span class="unit">m</span></span><span class="lbl">&darr; Abstieg</span></div>
     </div>
-    <div class="frame"><iframe src="https://www.komoot.com/tour/3185438549/embed?share_token=aJcBvgZdLGMAIjvbm38IbFJl3cbYalw8fQgy9rCfq2vu7Oiq1p&amp;hl=de&amp;layout=classic&amp;profile=1" width="100%" height="700" scrolling="no" title="Komoot-Route Walchsee nach Lofer, über St. Johann und Pillersee"></iframe></div>
+    <div class="frame"><iframe src="https://www.komoot.com/tour/3185438549/embed?share_token=aJcBvgZdLGMAIjvbm38IbFJl3cbYalw8fQgy9rCfq2vu7Oiq1p&amp;hl=de&amp;layout=classic&amp;profile=1" width="736" height="700" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Komoot-Route Walchsee nach Lofer, über St. Johann und Pillersee"></iframe></div>
     <h4 class="card-subtitle">Zeitplan-Vorschlag für den Samstag</h4>
-    <p>Option Rosenheim:</p>
+    <p>Die Komoot-Zeiten oben sind reine Fahrzeiten. Mit einer größeren Gruppe, kurzen Stopps und dem üblichen Sammeln nach Abzweigungen sollten wir etwa 20&ndash;30&nbsp;% Puffer einplanen. Damit brauchen wir von Rosenheim zum Walchsee realistisch rund 2:45&ndash;3:00&nbsp;h, von Kufstein etwa 1:10&ndash;1:25&nbsp;h. Für die Weiterfahrt nach Lofer sind es je nach Route ungefähr 2:00&ndash;2:20&nbsp;h direkt, 2:40&ndash;3:00&nbsp;h über Griesnau oder 3:45&ndash;4:15&nbsp;h über den Pillersee.</p>
+    <p><strong>Option Rosenheim:</strong></p>
     <ul class="timeline">
       <li><span class="t">08:30</span><span class="ev"><strong>Treffpunkt</strong> am Holzkirchner Flügelbahnhof, München Hbf Gleis 5&ndash;10</span></li>
       <li><span class="t">08:43</span><span class="ev">RE5 ab München &rarr; an Rosenheim 09:26</span></li>
+      <li><span class="t">ca. 09:40</span><span class="ev">Abfahrt in Rosenheim, sobald alle Räder ausgeladen sind</span></li>
     </ul>
-    <p>Ab Rosenheim geht's dann mit dem Rad weiter zum Walchsee.</p>
+    <p><strong>Option Kufstein:</strong></p>
     <ul class="timeline">
-      <li><span class="t">ca. 12:00</span><span class="ev">Alle am Walchsee &ndash; Baden, Brotzeit, Füße hochlegen</span></li>
+      <li><span class="t">08:30</span><span class="ev"><strong>Treffpunkt</strong> am Holzkirchner Flügelbahnhof, München Hbf Gleis 5&ndash;10</span></li>
+      <li><span class="t">09:36</span><span class="ev">RB54 ab München &rarr; an Kufstein 11:07</span></li>
+      <li><span class="t">ca. 11:20</span><span class="ev">Abfahrt in Kufstein, sobald alle Räder ausgeladen sind</span></li>
+    </ul>
+    <p>Mit beiden Varianten sollten wir ungefähr gleichzeitig am Walchsee ankommen:</p>
+    <ul class="timeline">
+      <li><span class="t">12:15&ndash;12:30</span><span class="ev">Alle am Walchsee &ndash; Baden, Brotzeit, Füße hochlegen</span></li>
       <li><span class="t">ca. 13:15</span><span class="ev">Weiterfahrt nach Lofer</span></li>
-      <li><span class="t">17:00&ndash;18:00</span><span class="ev">Ankunft Lofer, je nach gewählter Route</span></li>
+      <li><span class="t">15:30&ndash;17:30</span><span class="ev">Ankunft Lofer, je nach gewählter Route; mit längerer Pause oder Panne spätestens gegen 18&nbsp;Uhr</span></li>
       <li><span class="t">20:00</span><span class="ev">Abendessen</span></li>
     </ul>
 
@@ -374,7 +387,7 @@
       <h4 class="card-title">Haus Alpenblick, Lofer</h4>
       <p>Übernachten tun wir im Haus Alpenblick, liegt etwas außerhalb von Lofer, aber man ist schnell in der Stadt.</p>
       <div class="note"><span class="note-icon">❓</span><p><strong>Noch offen:</strong> Check-in-Zeit, wo wir die Räder über Nacht sicher unterstellen.</p></div>
-      <div class="frame"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93068.96838323816!2d12.629779718929967!3d47.58430549437075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4776f622c3eadcff%3A0x4e04d52e90fdf030!2sFerienhaus%20Alpenblick%20in%20Lofer!5e1!3m2!1sde!2sde!4v1786546117360!5m2!1sde!2sde" width="100%" height="380" style="border:0;" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Lage Haus Alpenblick in Lofer"></iframe></div>
+      <div class="frame"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d93068.96838323816!2d12.629779718929967!3d47.58430549437075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4776f622c3eadcff%3A0x4e04d52e90fdf030!2sFerienhaus%20Alpenblick%20in%20Lofer!5e1!3m2!1sde!2sde!4v1786546117360!5m2!1sde!2sde" width="736" height="380" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Lage Haus Alpenblick in Lofer"></iframe></div>
     </div>
 
     <div class="card card--amber">
@@ -412,25 +425,28 @@
 
     <h3 class="option-title">Variante 1 &ndash; über den Hirschbichl-Pass</h3>
     <span class="badge">Rad &middot; steil, autofrei</span>
-    <p>Der Hirschbichl ist eine autofreie Forststraße, da fährt nur ein Linienbus &ndash; dafür ist die Straße ziemlich steil (angeblich bis zu 30&nbsp;% an manchen Stellen). Laut <a href="https://www.quaeldich.de/paesse/hirschbichl/#auffahrten">Quäldich</a> zwar heftig, aber mit dem Rennrad machbar. Und laut einem Kumpel kann man die 30-%-Rampe mit dem Gravelbike auch durch den Wald umfahren. Dafür bekommen wir auf dem Pass (1152&nbsp;m) die Loferer Steinberge nochmal von der anderen Seite zu sehen und blicken hinüber zur Reiter Alm, einem großen Bergplateau. Auf der Abfahrt geht's mitten ins Berchtesgadener Land hinein, wo schon bald der Watzmann (2713&nbsp;m) &ndash; Deutschlands dritthöchster Berg und das Postkartenmotiv der Region &ndash; über den Baumwipfeln auftaucht.</p>
+    <p>Der Hirschbichl ist eine für den normalen Autoverkehr gesperrte, asphaltierte Passstraße, auf der allerdings der Wanderbus unterwegs ist. Die Südauffahrt ab Weißbach ist auf 7,1&nbsp;km mit 558&nbsp;Höhenmetern und durchschnittlich 7,9&nbsp;% schon insgesamt anspruchsvoll. Laut <a href="https://www.quaeldich.de/paesse/hirschbichl/#auffahrten">Quäldich</a> kommen dazu mehrere Passagen mit 12&ndash;15&nbsp;% und kurz vor dem Pass eine etwa 300&ndash;400&nbsp;m lange Rampe, die mit 25 bis 30&nbsp;% angegeben ist.</p>
+    <p>Die Strecke ist grundsätzlich auch mit dem Rennrad fahrbar, aber ob wir die steilsten Rampen wirklich hochfahren, hängt stark von der individuellen Fitness und vor allem von der Übersetzung am Rad ab. Eine Übersetzung um 1:1 oder leichter hilft deutlich; mit einer klassischen Rennradübersetzung kann selbst für fitte Fahrer eine kurze Schiebepassage realistischer sein. Das ist völlig okay und sollte bei der Zeitplanung einkalkuliert werden. Mit dem Gravelbike lässt sich die steilste Rampe laut einem Kumpel durch den Wald umfahren, darauf sollten wir uns für die ganze Gruppe aber nicht verlassen. Auf der schmalen Abfahrt müssen wir außerdem wegen Wanderern, Kühen und dem Wanderbus vorsichtig sein.</p>
+    <p>Dafür bekommen wir auf dem Pass (1152&nbsp;m) die Loferer Steinberge nochmal von der anderen Seite zu sehen und blicken hinüber zur Reiter Alm, einem großen Bergplateau. Auf der Abfahrt geht's mitten ins Berchtesgadener Land hinein, wo schon bald der Watzmann (2713&nbsp;m) &ndash; Deutschlands dritthöchster Berg und das Postkartenmotiv der Region &ndash; über den Baumwipfeln auftaucht.</p>
     <div class="stat-row">
       <div class="stat"><span class="num">73,7<span class="unit">km</span></span><span class="lbl">bis Freilassing</span></div>
       <div class="stat"><span class="num">3:20<span class="unit">h</span></span><span class="lbl">Fahrzeit</span></div>
       <div class="stat"><span class="num">860<span class="unit">m</span></span><span class="lbl">&uarr; Anstieg</span></div>
       <div class="stat"><span class="num">1.060<span class="unit">m</span></span><span class="lbl">&darr; Abstieg</span></div>
     </div>
-    <div class="frame"><iframe src="https://www.komoot.com/tour/3185424227/embed?share_token=a5h3K5cSywI9C3YibwMzmPgcw7b6uoG2SY4f4GqsDGOuSyftvv&amp;hl=de&amp;layout=classic&amp;profile=1" width="100%" height="700" scrolling="no" title="Komoot-Route Lofer nach Freilassing über den Hirschbichl"></iframe></div>
+    <div class="frame"><iframe src="https://www.komoot.com/tour/3185424227/embed?share_token=a5h3K5cSywI9C3YibwMzmPgcw7b6uoG2SY4f4GqsDGOuSyftvv&amp;hl=de&amp;layout=classic&amp;profile=1" width="736" height="700" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Komoot-Route Lofer nach Freilassing über den Hirschbichl"></iframe></div>
 
     <h3 class="option-title">Variante 2 &ndash; entlang der Bundesstraße</h3>
     <span class="badge">Rad &middot; flacher, mehr Verkehr</span>
-    <p>Die Alternative läuft an der Bundesstraße entlang und bleibt dabei im Tal der Saalach, mit der Reiter Alm links und den Loferer Steinbergen im Rückspiegel &ndash; deutlich flacher, dafür halt mehr Autos, was sich Sonntagvormittag aber wahrscheinlich in Grenzen hält. Gleiche Fahrzeit wie über den Hirschbichl, aber rund 100&nbsp;Höhenmeter weniger im Anstieg, und der Watzmann zeigt sich erst kurz vor Berchtesgaden.</p>
+    <p>Die Alternative bleibt im Tal der Saalach und führt abschnittsweise über oder unmittelbar entlang der B178, B21 und B305, mit der Reiter Alm links und den Loferer Steinbergen im Rückspiegel. Teilweise gibt es begleitende Radwege und ruhigere Ausweichstücke; bei Melleck können wir zum Beispiel die alte Bundesstraße nutzen. Eine durchgehend vom Verkehr getrennte Verbindung ist es aber nicht. Gerade die B21 durchs Kleine Deutsche Eck ist eine wichtige Transitroute, auf der im August auch sonntags mit Ausflugs- und Reiseverkehr zu rechnen ist.</p>
+    <p>Die Strecke ist deutlich flacher und berechenbarer als der Hirschbichl, verkehrlich aber klar die unangenehmere der beiden Optionen. Die reine Fahrzeit ist laut Komoot gleich, dafür sind es rund 100&nbsp;Höhenmeter weniger im Anstieg, und der Watzmann zeigt sich erst kurz vor Berchtesgaden.</p>
     <div class="stat-row">
       <div class="stat"><span class="num">75,6<span class="unit">km</span></span><span class="lbl">bis Freilassing</span></div>
       <div class="stat"><span class="num">3:20<span class="unit">h</span></span><span class="lbl">Fahrzeit</span></div>
       <div class="stat"><span class="num">770<span class="unit">m</span></span><span class="lbl">&uarr; Anstieg</span></div>
       <div class="stat"><span class="num">970<span class="unit">m</span></span><span class="lbl">&darr; Abstieg</span></div>
     </div>
-    <div class="frame"><iframe src="https://www.komoot.com/tour/3193491936/embed?share_token=aWqBakitjmj0FZHWZp3KoQ52hOW5e61KKRo3NyClSl3878kIVU&amp;hl=de&amp;layout=classic&amp;profile=1" width="100%" height="700" scrolling="no" title="Komoot-Route Lofer nach Freilassing, Bundesstraße"></iframe></div>
+    <div class="frame"><iframe src="https://www.komoot.com/tour/3193491936/embed?share_token=aWqBakitjmj0FZHWZp3KoQ52hOW5e61KKRo3NyClSl3878kIVU&amp;hl=de&amp;layout=classic&amp;profile=1" width="736" height="700" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Komoot-Route Lofer nach Freilassing, Bundesstraße"></iframe></div>
 
     <h3 class="stage-title">Königssee, Berchtesgaden &amp; Salzburg</h3>
     <p>Beide Routen treffen sich am Königssee, direkt am Fuß des Watzmanns. Da können wir uns, wenn wir Bock haben, unter die Touristenmassen mischen und einmal in den See hüpfen &ndash; das smaragdgrüne Wasser und die Kulisse sind schon beeindruckend, auch wenn's touristisch ist. Die berühmte Kirche St.&nbsp;Bartholomä mit den roten Zwiebeltürmen liegt allerdings nur per Boot erreichbar auf der anderen Seite des Sees. Mehr gibt's da meiner Meinung nach aber auch nicht zu sehen.</p>
@@ -443,7 +459,7 @@
 
     <span class="badge badge--neutral">Zug &middot; ca. 1:45&ndash;1:57&nbsp;h</span>
     <p>Von Freilassing geht's mit dem RE5 direkt zurück nach München Hbf, einmal pro Stunde jeweils um&nbsp;:24:</p>
-    <img class="plan" src="attachments/db-freilassing-muenchen.png" alt="DB-Fahrplan Freilassing nach München Hbf, RE5, Fahrzeit ca. 1 Stunde 45 bis 1 Stunde 57 Minuten">
+    <img class="plan" src="assets/images/db-freilassing-muenchen.png" alt="DB-Fahrplan Freilassing nach München Hbf, RE5, Fahrzeit ca. 1 Stunde 45 bis 1 Stunde 57 Minuten" width="2396" height="1596" loading="lazy" decoding="async">
 
     <h4 class="card-subtitle">Zeitplan-Vorschlag für den Sonntag</h4>
     <p>Am Sonntag steht einiges auf dem Programm und am Nachmittag vielleicht sogar Regen. Zu den 3:20&nbsp;h reiner Fahrzeit kommen noch Königssee, Almkanal und Salzburg &ndash; realistisch sind das mit Pausen acht bis neun Stunden. Damit das aufgeht, sollten wir früh los.</p>
@@ -472,7 +488,7 @@
     <div class="card">
       <span class="badge badge--neutral">Aufteilen</span>
       <h4 class="card-title">Gemeinsame Packliste</h4>
-      <p class="checklist-progress" data-progress-for="gemeinsam"></p>
+      <p class="checklist-progress" data-progress-for="gemeinsam" aria-live="polite"></p>
       <ul class="checklist" data-list="gemeinsam">
         <li><label><input type="checkbox" data-key="gemeinsam-fahrradschloss"><span class="txt">Fahrradschloss</span></label></li>
         <li><label><input type="checkbox" data-key="gemeinsam-abendessen"><span class="txt">ggf. Zutaten fürs Abendessen</span></label></li>
@@ -487,7 +503,7 @@
     <div class="card">
       <span class="badge">Jeder für sich</span>
       <h4 class="card-title">Daran sollte jeder denken</h4>
-      <p class="checklist-progress" data-progress-for="jeder"></p>
+      <p class="checklist-progress" data-progress-for="jeder" aria-live="polite"></p>
       <ul class="checklist" data-list="jeder">
         <li><label><input type="checkbox" data-key="jeder-sonnencreme"><span class="txt">Sonnencreme</span></label></li>
         <li><label><input type="checkbox" data-key="jeder-helm"><span class="txt">Helm</span></label></li>
@@ -521,7 +537,8 @@
 
   function loadState(){
     try{
-      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+      var stored = JSON.parse(localStorage.getItem(STORAGE_KEY));
+      return stored && typeof stored === 'object' && !Array.isArray(stored) ? stored : {};
     }catch(e){
       return {};
     }
@@ -545,9 +562,8 @@
     var key = box.getAttribute('data-key');
     box.checked = !!state[key];
     box.addEventListener('change', function(){
-      var s = loadState();
-      s[key] = box.checked;
-      saveState(s);
+      state[key] = box.checked;
+      saveState(state);
       updateProgress();
     });
   });
@@ -556,7 +572,8 @@
   var resetBtn = document.getElementById('checklist-reset-btn');
   if(resetBtn){
     resetBtn.addEventListener('click', function(){
-      saveState({});
+      state = {};
+      saveState(state);
       boxes.forEach(function(box){ box.checked = false; });
       updateProgress();
     });
