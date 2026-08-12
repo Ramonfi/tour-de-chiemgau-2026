@@ -144,6 +144,15 @@
   }
   .card--amber{border-color:var(--amber-soft);}
 
+  .note{
+    display:flex; gap:.85rem; align-items:flex-start;
+    background:var(--amber-soft); border:1px solid var(--amber-soft);
+    border-radius:10px; padding:.9rem 1.1rem; margin:1rem 0 1.3rem;
+  }
+  .note .note-icon{font-size:1.15rem; line-height:1.4; flex-shrink:0;}
+  .note p{margin:0; font-size:.95rem;}
+  .note strong{color:var(--amber);}
+
   .stat-row{
     display:flex; flex-wrap:wrap; gap:1.5rem;
     margin:1.05rem 0; padding:.9rem 1.1rem;
@@ -185,10 +194,27 @@
   @media (prefers-reduced-motion:no-preference){
     .card{transition:box-shadow .2s ease;}
   }
-</style>
 
+  h3.stage-title{font-family:'Big Shoulders Display'; font-weight:700; font-size:1.55rem; margin:2.4rem 0 1rem; padding-bottom:.5rem; border-bottom:1px solid var(--line); color:var(--accent-strong); letter-spacing:-.005em;}
+  .day-head + h3.stage-title{margin-top:0;}
+
+  .checklist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.15rem;}
+  .checklist li{border-bottom:1px solid var(--line);}
+  .checklist li:last-child{border-bottom:none;}
+  .checklist label{display:flex; align-items:center; gap:.85rem; padding:.65rem .1rem; cursor:pointer; font-size:.98rem;}
+  .checklist input[type="checkbox"]{appearance:none; -webkit-appearance:none; flex-shrink:0; width:1.25rem; height:1.25rem; border-radius:5px; border:1.5px solid var(--ink-faint); background:var(--surface); display:grid; place-content:center; cursor:pointer;}
+  .checklist input[type="checkbox"]::before{content:""; width:.7rem; height:.7rem; transform:scale(0); box-shadow:inset 1em 1em var(--accent); clip-path:polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);}
+  .checklist input[type="checkbox"]:checked{border-color:var(--accent);}
+  .checklist input[type="checkbox"]:checked::before{transform:scale(1);}
+  .checklist label span.txt{transition:color .15s ease, opacity .15s ease;}
+  .checklist input[type="checkbox"]:checked ~ span.txt{color:var(--ink-faint); text-decoration:line-through; opacity:.75;}
+  .checklist-progress{font-family:'Big Shoulders Display'; font-weight:700; font-size:.72rem; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-faint); margin:-.2rem 0 .5rem;}
+  .checklist-reset{background:none; border:none; font-family:'Source Serif 4',Georgia,serif; font-size:.85rem; color:var(--ink-faint); text-decoration:underline; text-underline-offset:2px; cursor:pointer; padding:0; margin-top:.9rem;}
+  .checklist-reset:hover{color:var(--ink);}
+</style>
 </head>
 <body>
+
 <div class="page">
 
   <header class="masthead">
@@ -197,28 +223,26 @@
       <path d="M-20 150 C 90 115, 190 165, 270 120 S 430 65, 505 110 S 650 155, 840 95" />
       <path d="M-20 120 C 80 90, 200 135, 280 95 S 435 45, 510 85 S 645 120, 840 70" />
     </svg>
-    <p class="kicker">Radtour &middot; 2 Tage &middot; Chiemgau &ndash; Tirol &ndash; Salzburg</p>
     <h1>Tour de&nbsp;Chiemgau</h1>
     <p class="dates">15.&ndash;16. August 2026</p>
-    <div class="meta-row">
-      <div class="meta-item"><span class="lbl">Treffpunkt</span><span class="val">München Hbf, Sa. 15.08., je nach Zug</span></div>
-      <div class="meta-item"><span class="lbl">Ziel Tag&nbsp;1</span><span class="val">Haus Alpenblick, Lofer</span></div>
-      <div class="meta-item"><span class="lbl">Ziel Tag&nbsp;2</span><span class="val">Salzburg &rarr; Freilassing</span></div>
-    </div>
   </header>
 
   <section class="day">
     <div class="day-head">
-      <span class="num">00</span>
-      <div class="txt"><h2>Anreise nach Tirol</h2><p class="sub">Zug ab München</p></div>
+      <span class="num">01</span>
+      <div class="txt"><h2>München &rarr; Lofer</h2><p class="sub">Etappe 1 &middot; Samstag, 15. August 2026</p></div>
     </div>
-    <p class="lede">Ab München kommen wir auf zwei Wegen zum Start: einmal über Rosenheim, einmal über Kufstein. Sucht euch aus, was euch lieber ist – am Ende landen wir eh alle zusammen am Walchsee und rollen von da gemeinsam weiter.</p>
+
+    <h3 class="stage-title">Anreise mit dem Zug</h3>
+    <p class="lede">Wir treffen uns am Samstag am München Hbf. Ab dort kommen wir auf zwei Wegen zum Start: einmal über Rosenheim, einmal über Kufstein. Sucht euch aus, was euch lieber ist.</p>
+
+    <div class="note"><span class="note-icon">🗳️</span><p><strong>Noch zu entscheiden:</strong> Welchen Zug nehmen wir &ndash; Variante a) über Rosenheim oder Variante b) über Kufstein? Bitte in der Gruppe abstimmen.</p></div>
 
     <h3 class="option-title">Variante a) über Rosenheim</h3>
     <span class="badge badge--neutral">Zug &middot; ca. 43&ndash;48&nbsp;min</span>
-    <p>Da gibt's ständig Verbindungen mit der RB54 oder RE5 ab München Hbf, ihr müsst also auf keinen bestimmten Zug hetzen:</p>
+    <p>Nach Rosenheim gibt's etwa einmal pro Stunde Direktverbindungen mit der RB54 oder RE5 ab München Hbf, wir wären also etwas flexibler:</p>
     <img class="plan" src="attachments/db-muenchen-rosenheim.png" alt="DB-Fahrplan München Hbf nach Rosenheim, RB54 und RE5, Fahrzeit 43 bis 48 Minuten">
-    <p>Ab Rosenheim schwingen wir uns aufs Rad und radeln rüber zum Walchsee.</p>
+    <p>Ab Rosenheim schwingen wir uns aufs Rad und radeln durch das sanfte Hügelland des Chiemgaus in Richtung Berge. Rechts blitzt kurz der Chiemsee zwischen den Hügeln durch, dann geht's stetig bergan am Fuß des Geigelstein (1808&nbsp;m) vorbei &ndash; dem Hausberg der Chiemgauer Alpen &ndash;, bevor wir nach gut zwei Stunden am Walchsee ankommen.</p>
     <div class="stat-row">
       <div class="stat"><span class="num">43,2<span class="unit">km</span></span><span class="lbl">Distanz</span></div>
       <div class="stat"><span class="num">2:11<span class="unit">h</span></span><span class="lbl">Fahrzeit</span></div>
@@ -229,9 +253,9 @@
 
     <h3 class="option-title">Variante b) über Kufstein</h3>
     <span class="badge badge--neutral">Zug &middot; ca. 1:21&ndash;1:55&nbsp;h</span>
-    <p>Mit der RB54 geht's ab München Hbf direkt durch nach Kufstein:</p>
+    <p>Nach Kufstein gibt es nur etwa alle 2&nbsp;h eine Direktverbindung mit der RB54 &ndash; die Fahrt dauert dann rund 1:30&nbsp;h:</p>
     <img class="plan" src="attachments/db-muenchen-kufstein.png" alt="DB-Fahrplan München Hbf nach Kufstein, RB54, Fahrzeit 1 Stunde 21 bis 1 Stunde 55 Minuten">
-    <p>Von Kufstein aus ist's mit dem Rad deutlich kürzer bis zum Walchsee.</p>
+    <p>Von Kufstein aus ist's mit dem Rad deutlich kürzer und bereits deutlich alpiner bis zum Walchsee. Wir fahren fast die ganze Zeit direkt am Fuß des Kaisergebirges entlang &ndash; dem markanten, schroffen Kalkstock aus Wildem und Zahmem Kaiser, der über Kufstein und Ebbs aufragt. Wer noch nie in den Alpen war, bekommt hier gleich das volle Programm an Steilwänden zu sehen. Wir brauchen nur eine gute Stunde. Dafür sind die Zugzeiten weniger flexibel.</p>
     <div class="stat-row">
       <div class="stat"><span class="num">18,8<span class="unit">km</span></span><span class="lbl">Distanz</span></div>
       <div class="stat"><span class="num">0:55<span class="unit">h</span></span><span class="lbl">Fahrzeit</span></div>
@@ -240,35 +264,28 @@
     </div>
     <div class="frame"><iframe src="https://www.komoot.com/tour/3185431425/embed?share_token=alrhqcwBzM6AURcJ6mGDNVl0WEGjSobhlj2fA4iu47AbEVqMVe&amp;hl=de&amp;layout=classic&amp;profile=1" width="100%" height="700" scrolling="no" title="Komoot-Route Kufstein nach Walchsee"></iframe></div>
 
-    <p>Von beiden Bahnhöfen aus radeln wir dann zum Walchsee, sodass wir so gegen Mittag (ca. 12&nbsp;Uhr) dort aufschlagen.</p>
-  </section>
+    <p>Von beiden Bahnhöfen aus kommen wir entspannt und malerisch zum Walchsee, sodass wir so gegen Mittag (ca. 12&nbsp;Uhr) dort aufschlagen und einen kleinen Bade- und/oder Lunch-Stop machen können.</p>
 
-  <div class="divider"><span class="line"></span><span class="label">Bade-Stopp</span><span class="line"></span></div>
-
-  <section class="day">
-    <div class="day-head">
-      <span class="num">01</span>
-      <div class="txt"><h2>Walchsee &rarr; Lofer</h2><p class="sub">Etappe 1 &middot; drei Streckenoptionen</p></div>
-    </div>
-    <p class="lede">Am Walchsee legen wir erstmal einen kurzen Bade- und Snack-Stopp ein – Füße hoch, kurz abkühlen. Danach haben wir drei Möglichkeiten, wie wir zu unserer Unterkunft in Lofer kommen.</p>
+    <h3 class="stage-title">Vom Walchsee nach Lofer</h3>
+    <p class="lede">Nach dem Füßehochlegen haben wir drei Optionen, wie wir zu unserer Unterkunft in Lofer kommen:</p>
 
     <h3 class="option-title">Option 1 &ndash; direkt entlang der Großache</h3>
-    <span class="badge">Rad</span>
-    <p>Die direkte Route folgt einfach der Großache durchs Tal nach Lofer. Läuft zwar größtenteils an der Bundesstraße entlang, die dürfte aber nicht allzu viel los sein.</p>
+    <span class="badge">Rad &middot; direkte Route</span>
+    <p>Die direkte Route folgt einfach der Großache (auf österreichischer Seite auch Kössener Ache genannt) durchs Tal nach Lofer &ndash; erst vorbei an Kössen und im Rücken noch einmal Blick zurück zum Kaisergebirge, dann weiter über Erpfendorf und Waidring. Ab Waidring taucht rechts schon die schroffe, helle Kalkwand der Loferer Steinberge auf, die uns bis nach Lofer begleitet. Läuft zwar größtenteils an der Bundesstraße entlang, die dürfte aber nicht allzu stark befahren sein. Wenn wir keine Lust mehr auf Radeln haben, sind wir so in knappen 2&nbsp;h am Ziel.</p>
     <div class="stat-row">
       <div class="stat"><span class="num">37,4<span class="unit">km</span></span><span class="lbl">Distanz</span></div>
       <div class="stat"><span class="num">1:38<span class="unit">h</span></span><span class="lbl">Fahrzeit</span></div>
       <div class="stat"><span class="num">320<span class="unit">m</span></span><span class="lbl">&uarr; Anstieg</span></div>
       <div class="stat"><span class="num">350<span class="unit">m</span></span><span class="lbl">&darr; Abstieg</span></div>
     </div>
-    <div class="frame"><iframe src="https://www.komoot.com/tour/3185438549/embed?share_token=aJcBvgZdLGMAIjvbm38IbFJl3cbYalw8fQgy9rCfq2vu7Oiq1p&amp;hl=de&amp;layout=classic&amp;profile=1" width="100%" height="700" scrolling="no" title="Komoot-Route Walchsee nach Lofer, direkt"></iframe></div>
+    <div class="frame"><iframe src="https://www.komoot.com/tour/3187285897/embed?share_token=aq0et45ufHujv7I8yieBHokPTjmYznhtum9ifDUQSYZayP6NLP&amp;hl=de&amp;layout=classic&amp;profile=1" width="100%" height="700" scrolling="no" title="Komoot-Route Walchsee nach Lofer, direkt"></iframe></div>
 
-    <h3 class="option-title">Option 2 &ndash; Seitental über den EuroVelo</h3>
+    <h3 class="option-title">Option 2 &ndash; Seitental über den Mozart Radweg</h3>
     <span class="badge">Rad &middot; teils unbefestigt</span>
-    <p>Wer statt Fluss lieber noch ein bisschen mehr Bergpanorama will, kann stattdessen durchs Seitental über Griesnau fahren und dem EuroVelo folgen. Ist nicht asphaltiert, aber notfalls kann man auf die Straße ausweichen. Kaum länger als die direkte Route, dafür landschaftlich viel schöner.</p>
+    <p>Wer statt Fluss lieber noch ein bisschen mehr Bergpanorama will, kann stattdessen über den Mozartradweg via Griesnau fahren. Wir bleiben dabei etwas länger in Sichtweite des Kaisergebirges, bevor wir über einen kleinen Sattel ins gleiche Tal wie die direkte Route wechseln und kurz vor Lofer noch am Mitterhorn vorbeikommen, einem kleinen, bewaldeten Hausberg direkt über dem Ort. Der Mozartradweg selbst ist nicht asphaltiert, aber Rennräder können auf die Straße ausweichen. Kaum länger als die direkte Route, dafür landschaftlich vermutlich etwas schöner.</p>
     <div class="stat-row">
-      <div class="stat"><span class="num">41,5<span class="unit">km</span></span><span class="lbl">Distanz</span></div>
-      <div class="stat"><span class="num">1:53<span class="unit">h</span></span><span class="lbl">Fahrzeit</span></div>
+      <div class="stat"><span class="num">43,7<span class="unit">km</span></span><span class="lbl">Distanz</span></div>
+      <div class="stat"><span class="num">2:07<span class="unit">h</span></span><span class="lbl">Fahrzeit</span></div>
       <div class="stat"><span class="num">420<span class="unit">m</span></span><span class="lbl">&uarr; Anstieg</span></div>
       <div class="stat"><span class="num">450<span class="unit">m</span></span><span class="lbl">&darr; Abstieg</span></div>
     </div>
@@ -276,17 +293,15 @@
 
     <h3 class="option-title">Option 3 &ndash; die malerische Variante</h3>
     <span class="badge">Rad &middot; längste Etappe</span>
-    <p>Die schönste und längste Variante geht über St.&nbsp;Johann in Tirol und am Pillersee vorbei nach Lofer &ndash; gut 17&nbsp;km und eine halbe Stunde mehr als die direkte Route, aber dafür mit Abstand die abwechslungsreichste Landschaft.</p>
+    <p>Die vermutlich landschaftlich schönste, aber auch längste Variante geht über St.&nbsp;Johann in Tirol und am Pillersee vorbei nach Lofer. Wir folgen erst wieder dem Mozartradweg direkt am Fuß des Kaisergebirges und biegen dann nach St.&nbsp;Johann in Tirol ab &ndash; einem hübschen Tiroler Marktort, der schon zu den Kitzbüheler Alpen gehört. Von dort folgen wir dem Tal in Richtung Fieberbrunn und biegen kurz davor Richtung Pillersee ab: ein kleiner, türkisgrüner Bergsee, eingerahmt von der Buchensteinwand. Hier können wir nochmal einen Badestopp machen, bevor wir über den letzten Hügel hinab nach Lofer rollen und dabei zum ersten Mal die ganze Breite der Loferer Steinberge vor uns haben. Insgesamt gut 20&nbsp;km und eineinhalb Stunden mehr als die direkte Route, aber dafür mit Abstand die abwechslungsreichste Landschaft.</p>
     <div class="stat-row">
-      <div class="stat"><span class="num">54,5<span class="unit">km</span></span><span class="lbl">Distanz</span></div>
-      <div class="stat"><span class="num">2:32<span class="unit">h</span></span><span class="lbl">Fahrzeit</span></div>
+      <div class="stat"><span class="num">58,0<span class="unit">km</span></span><span class="lbl">Distanz</span></div>
+      <div class="stat"><span class="num">3:02<span class="unit">h</span></span><span class="lbl">Fahrzeit</span></div>
       <div class="stat"><span class="num">610<span class="unit">m</span></span><span class="lbl">&uarr; Anstieg</span></div>
-      <div class="stat"><span class="num">630<span class="unit">m</span></span><span class="lbl">&darr; Abstieg</span></div>
+      <div class="stat"><span class="num">640<span class="unit">m</span></span><span class="lbl">&darr; Abstieg</span></div>
     </div>
-    <div class="frame"><iframe src="https://www.komoot.com/tour/3187285897/embed?share_token=aq0et45ufHujv7I8yieBHokPTjmYznhtum9ifDUQSYZayP6NLP&amp;hl=de&amp;layout=classic&amp;profile=1" width="100%" height="700" scrolling="no" title="Komoot-Route Walchsee nach Lofer, über St. Johann und Pillersee"></iframe></div>
-  </section>
+    <div class="frame"><iframe src="https://www.komoot.com/tour/3185438549/embed?share_token=aJcBvgZdLGMAIjvbm38IbFJl3cbYalw8fQgy9rCfq2vu7Oiq1p&amp;hl=de&amp;layout=classic&amp;profile=1" width="100%" height="700" scrolling="no" title="Komoot-Route Walchsee nach Lofer, über St. Johann und Pillersee"></iframe></div>
 
-  <section class="day">
     <div class="card">
       <span class="badge">Unterkunft</span>
       <h4 class="card-title">Haus Alpenblick, Lofer</h4>
@@ -302,6 +317,7 @@
         <li><strong>Selbst einkaufen und kochen:</strong> Wir kaufen schon in München ein und verteilen das Zeug auf die Räder, dann kochen wir abends zusammen. Vorteil: gemütliches Kochen in großer Runde. Nachteil: Wir schleppen das den ganzen Tag mit uns rum und der Speiseplan ist auf hitzefestes Essen limitiert.</li>
         <li><strong>Abends essen gehen in Lofer:</strong> Von der <a href="https://maps.app.goo.gl/r2EoyWKSF5ASw19C6">Brasserie</a> bis zum <a href="https://www.hotel-lofer.com/images/317_Speisekarte_NEU.pdf">Wirtshaus</a> ist einiges dabei &ndash; da wird sich schon was Passendes finden.</li>
       </ol>
+      <div class="note"><span class="note-icon">🗳️</span><p><strong>Noch zu entscheiden:</strong> Selbst kochen (Zutaten mitnehmen) oder abends essen gehen? Bitte in der Gruppe abstimmen.</p></div>
       <p>Frühstück gibt's dann entweder in der <a href="https://maps.app.goo.gl/WYrJ8snpd4BK9KBeA">örtlichen Bäckerei</a> oder im <a href="https://maps.app.goo.gl/Ey8H8Tm2sgGuTbBB9">Café Dankl</a>.</p>
     </div>
   </section>
@@ -311,13 +327,15 @@
   <section class="day">
     <div class="day-head">
       <span class="num">02</span>
-      <div class="txt"><h2>Lofer &rarr; Königssee &rarr; Salzburg</h2><p class="sub">Etappe 2 &middot; zwei Streckenoptionen</p></div>
+      <div class="txt"><h2>Lofer &rarr; Salzburg</h2><p class="sub">Etappe 2 &middot; Sonntag, 16. August 2026</p></div>
     </div>
-    <p class="lede">Nach dem Frühstück geht's am Sonntag weiter Richtung Königssee und Salzburg. Ich hab dafür zwei Routen zusammengebastelt.</p>
+
+    <h3 class="stage-title">Über den Königssee</h3>
+    <p class="lede">Nach dem Frühstück geht's weiter Richtung Königssee und Salzburg. Ich hab dafür zwei Routen zusammengebastelt.</p>
 
     <h3 class="option-title">Variante 1 &ndash; über den Hirschbichl-Pass</h3>
     <span class="badge">Rad &middot; steil, autofrei</span>
-    <p>Der Hirschbichl ist eine autofreie Forststraße, da fährt nur der Linienbus &ndash; dafür ist die ziemlich steil (angeblich bis zu 30&nbsp;% an manchen Stellen). Laut <a href="https://www.quaeldich.de/paesse/hirschbichl/#auffahrten">Quäldich</a> zwar heftig, aber mit dem Rennrad machbar. Und laut einem Kumpel kann man die 30-%-Rampe mit dem Gravelbike auch durch den Wald umfahren.</p>
+    <p>Der Hirschbichl ist eine autofreie Forststraße, da fährt nur der Linienbus &ndash; dafür ist die ziemlich steil (angeblich bis zu 30&nbsp;% an manchen Stellen). Laut <a href="https://www.quaeldich.de/paesse/hirschbichl/#auffahrten">Quäldich</a> zwar heftig, aber mit dem Rennrad machbar. Und laut einem Kumpel kann man die 30-%-Rampe mit dem Gravelbike auch durch den Wald umfahren. Dafür bekommen wir auf dem Pass (1152&nbsp;m) die Loferer Steinberge nochmal von der anderen Seite zu sehen und blicken hinüber zur Reiter Alm, einem großen Bergplateau. Auf der Abfahrt geht's mitten ins Berchtesgadener Land hinein, wo schon bald der Watzmann (2713&nbsp;m) &ndash; Deutschlands dritthöchster Berg und das Postkartenmotiv der Region &ndash; über den Baumwipfeln auftaucht.</p>
     <div class="stat-row">
       <div class="stat"><span class="num">73,7<span class="unit">km</span></span><span class="lbl">bis Freilassing</span></div>
       <div class="stat"><span class="num">3:20<span class="unit">h</span></span><span class="lbl">Fahrzeit</span></div>
@@ -328,7 +346,7 @@
 
     <h3 class="option-title">Variante 2 &ndash; entlang der Bundesstraße</h3>
     <span class="badge">Rad &middot; flacher, mehr Verkehr</span>
-    <p>Die Alternative läuft an der Bundesstraße entlang und ist dafür deutlich flacher &ndash; dafür halt mehr Autos, was sich Sonntagvormittag aber wahrscheinlich in Grenzen hält. Gleiche Fahrzeit wie über den Hirschbichl, aber rund 100&nbsp;Höhenmeter weniger im Anstieg.</p>
+    <p>Die Alternative läuft an der Bundesstraße entlang und bleibt dabei im Tal der Saalach, mit der Reiter Alm links und den Loferer Steinbergen im Rückspiegel &ndash; dafür deutlich flacher, dafür halt mehr Autos, was sich Sonntagvormittag aber wahrscheinlich in Grenzen hält. Gleiche Fahrzeit wie über den Hirschbichl, aber rund 100&nbsp;Höhenmeter weniger im Anstieg, und der Watzmann zeigt sich erst kurz vor Berchtesgaden.</p>
     <div class="stat-row">
       <div class="stat"><span class="num">75,6<span class="unit">km</span></span><span class="lbl">bis Freilassing</span></div>
       <div class="stat"><span class="num">3:20<span class="unit">h</span></span><span class="lbl">Fahrzeit</span></div>
@@ -336,29 +354,59 @@
       <div class="stat"><span class="num">970<span class="unit">m</span></span><span class="lbl">&darr; Abstieg</span></div>
     </div>
     <div class="frame"><iframe src="https://www.komoot.com/tour/3193491936/embed?share_token=aWqBakitjmj0FZHWZp3KoQ52hOW5e61KKRo3NyClSl3878kIVU&amp;hl=de&amp;layout=classic&amp;profile=1" width="100%" height="700" scrolling="no" title="Komoot-Route Lofer nach Freilassing, Bundesstraße"></iframe></div>
-  </section>
 
-  <section class="day">
-    <div class="day-head">
-      <span class="num">03</span>
-      <div class="txt"><h2>Königssee, Berchtesgaden &amp; Salzburg</h2><p class="sub">Sehenswürdigkeiten auf dem Weg</p></div>
-    </div>
-    <p>Beide Routen treffen sich am Königssee. Da können wir uns, wenn wir Bock haben, unter die Touristenmassen mischen und einmal in den See hüpfen. Mehr gibt's da meiner Meinung nach aber auch nicht zu sehen.</p>
-    <p>Von dort geht's weiter nach Berchtesgaden und zurück Richtung Österreich. Wir kommen am Obersalzberg und der Roßfeld Panoramastraße vorbei und folgen dann mehr oder weniger der Berchtesgadener Ache Richtung Salzburg.</p>
+    <h3 class="stage-title">Königssee, Berchtesgaden &amp; Salzburg</h3>
+    <p>Beide Routen treffen sich am Königssee, direkt am Fuß des Watzmanns. Da können wir uns, wenn wir Bock haben, unter die Touristenmassen mischen und einmal in den See hüpfen &ndash; das smaragdgrüne Wasser und die Kulisse sind schon beeindruckend, auch wenn's touristisch ist. Die berühmte Kirche St.&nbsp;Bartholomä mit den roten Zwiebeltürmen liegt allerdings nur per Boot erreichbar auf der anderen Seite des Sees. Mehr gibt's da meiner Meinung nach aber auch nicht zu sehen.</p>
+    <p>Von dort geht's weiter nach Berchtesgaden und zurück Richtung Österreich. Wir kommen am Obersalzberg vorbei &ndash; heute vor allem bekannt für seine Aussicht, historisch als Hitlers Rückzugsort &ndash; und an der Roßfeld Panoramastraße, die sich oberhalb von uns entlang der Grenze schlängelt. Danach folgen wir mehr oder weniger der Berchtesgadener Ache Richtung Salzburg, während der Untersberg &ndash; der Hausberg von Salzburg, an dem der Sage nach Kaiser Karl der Große schlafen soll &ndash; langsam vor uns aufwächst.</p>
     <p>Auf dem Weg nach Salzburg können wir noch kurz beim Almkanal vorbeischauen &ndash; ein künstlicher Kanal, in dem die Salzburger floaten und baden gehen, quasi ihr Eisbach. Achtung, das Wasser ist eiskalt!</p>
     <p>Und dann sind wir auch schon in Salzburg. Da können wir nochmal auftanken, Zucker und Akku, und einfach die Seele baumeln lassen.</p>
-  </section>
 
-  <section class="day">
-    <div class="day-head">
-      <span class="num">04</span>
-      <div class="txt"><h2>Rückfahrt</h2><p class="sub">Salzburg &rarr; Freilassing &rarr; Zug</p></div>
-    </div>
+    <h3 class="stage-title">Rückfahrt</h3>
     <p>Ich würd vorschlagen, wir fahren von hier noch über die Grenze und steigen erst in Freilassing in die Regio. Spart uns die Grenzkontrolle und ein bisschen Nerven. Und in Freilassing haben wir dann noch nen leeren Zug und müssen uns nicht mit halb Salzburg um die Fahrradplätze streiten.</p>
 
     <span class="badge badge--neutral">Zug &middot; ca. 1:45&ndash;1:57&nbsp;h</span>
-    <p>Von Freilassing geht's mit dem RE5 direkt zurück nach München Hbf, mehrmals pro Stunde:</p>
-    <img class="plan" src="attachments/db-freilassing-muenchen.png" alt="DB-Fahrplan Freilassing nach München Hbf, RE5, Fahrzeit ca. 1 Stunde 45 bis 1 Stunde 57 Minuten, ab 32 Euro">
+    <p>Von Freilassing geht's mit dem RE5 direkt zurück nach München Hbf, einmal pro Stunde:</p>
+    <img class="plan" src="attachments/db-freilassing-muenchen.png" alt="DB-Fahrplan Freilassing nach München Hbf, RE5, Fahrzeit ca. 1 Stunde 45 bis 1 Stunde 57 Minuten">
+  </section>
+
+  <div class="divider"><span class="line"></span><span class="label">Packliste</span><span class="line"></span></div>
+
+  <section class="day" id="packliste">
+    <div class="day-head">
+      <span class="num">03</span>
+      <div class="txt"><h2>Packliste</h2><p class="sub">Häkchen bleiben nur in diesem Browser gespeichert</p></div>
+    </div>
+    <p class="lede">Ein paar Sachen können wir uns aufteilen, den Rest sollte jeder selbst dabeihaben. Abgehakte Punkte werden lokal auf eurem Gerät gespeichert &ndash; niemand sonst sieht euren Fortschritt.</p>
+
+    <div class="card">
+      <span class="badge badge--neutral">Aufteilen</span>
+      <h4 class="card-title">Gemeinsame Packliste</h4>
+      <p class="checklist-progress" data-progress-for="gemeinsam"></p>
+      <ul class="checklist" data-list="gemeinsam">
+        <li><label><input type="checkbox" data-key="gemeinsam-fahrradschloss"><span class="txt">Fahrradschloss</span></label></li>
+        <li><label><input type="checkbox" data-key="gemeinsam-abendessen"><span class="txt">ggf. Zutaten fürs Abendessen</span></label></li>
+        <li><label><input type="checkbox" data-key="gemeinsam-fruehstueck"><span class="txt">ggf. Frühstück</span></label></li>
+        <li><label><input type="checkbox" data-key="gemeinsam-erste-hilfe"><span class="txt">Erste-Hilfe-Kit (Roman)</span></label></li>
+        <li><label><input type="checkbox" data-key="gemeinsam-kartenspiele"><span class="txt">Kartenspiele</span></label></li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <span class="badge">Jeder für sich</span>
+      <h4 class="card-title">Daran sollte jeder denken</h4>
+      <p class="checklist-progress" data-progress-for="jeder"></p>
+      <ul class="checklist" data-list="jeder">
+        <li><label><input type="checkbox" data-key="jeder-sonnencreme"><span class="txt">Sonnencreme</span></label></li>
+        <li><label><input type="checkbox" data-key="jeder-ausweis"><span class="txt">Ausweis (Achtung Grenzkontrollen)</span></label></li>
+        <li><label><input type="checkbox" data-key="jeder-regenjacke"><span class="txt">ggf. Regenjacke</span></label></li>
+        <li><label><input type="checkbox" data-key="jeder-badesachen"><span class="txt">Badesachen</span></label></li>
+        <li><label><input type="checkbox" data-key="jeder-bargeld"><span class="txt">Bargeld (Bäckerei, kleine Läden, evtl. keine Kartenzahlung)</span></label></li>
+        <li><label><input type="checkbox" data-key="jeder-wasserflaschen"><span class="txt">Wasserflaschen</span></label></li>
+        <li><label><input type="checkbox" data-key="jeder-traubenzucker"><span class="txt">Traubenzucker / Riegel</span></label></li>
+      </ul>
+    </div>
+
+    <button class="checklist-reset" type="button" id="checklist-reset-btn">Alle Häkchen zurücksetzen</button>
   </section>
 
   <footer>
@@ -367,5 +415,55 @@
   </footer>
 
 </div>
+
+<script>
+(function(){
+  var STORAGE_KEY = 'tourDeChiemgau2026.packliste';
+  var boxes = document.querySelectorAll('.checklist input[type="checkbox"]');
+
+  function loadState(){
+    try{
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+    }catch(e){
+      return {};
+    }
+  }
+  function saveState(state){
+    try{
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }catch(e){}
+  }
+  function updateProgress(){
+    document.querySelectorAll('[data-list]').forEach(function(list){
+      var items = list.querySelectorAll('input[type="checkbox"]');
+      var done = list.querySelectorAll('input[type="checkbox"]:checked').length;
+      var out = document.querySelector('[data-progress-for="' + list.getAttribute('data-list') + '"]');
+      if(out) out.textContent = done + ' / ' + items.length + ' erledigt';
+    });
+  }
+
+  var state = loadState();
+  boxes.forEach(function(box){
+    var key = box.getAttribute('data-key');
+    box.checked = !!state[key];
+    box.addEventListener('change', function(){
+      var s = loadState();
+      s[key] = box.checked;
+      saveState(s);
+      updateProgress();
+    });
+  });
+  updateProgress();
+
+  var resetBtn = document.getElementById('checklist-reset-btn');
+  if(resetBtn){
+    resetBtn.addEventListener('click', function(){
+      saveState({});
+      boxes.forEach(function(box){ box.checked = false; });
+      updateProgress();
+    });
+  }
+})();
+</script>
 </body>
 </html>
