@@ -144,6 +144,12 @@
     padding:1.5rem 1.5rem 1.6rem; margin-bottom:1.6rem; box-shadow:var(--shadow);
   }
   .card--amber{border-color:var(--amber-soft);}
+  .choice--selected{background:var(--accent-soft); border-radius:8px; padding:.65rem .8rem;}
+  .choice--selected::marker{color:var(--accent); font-weight:700;}
+  .choice--alternative{color:var(--ink-soft); opacity:.5; filter:grayscale(1);}
+  .option-title--selected{display:inline-block; color:var(--accent-strong);}
+  .option-title--alternative{color:var(--ink-soft);}
+  .option--alternative{opacity:.5; filter:grayscale(1);}
 
   .note{
     display:flex; gap:.85rem; align-items:flex-start;
@@ -153,6 +159,10 @@
   .note .note-icon{font-size:1.15rem; line-height:1.4; flex-shrink:0;}
   .note p{margin:0; font-size:.95rem;}
   .note strong{color:var(--amber);}
+  .note--decided{background:var(--accent-soft); border-color:var(--accent-soft);}
+  .note--decided strong{color:var(--accent-strong);}
+  .weather-note{border-left:4px solid var(--amber);}
+  .weather-note--wet{border-left-color:var(--accent);}
 
   .stat-row{
     display:flex; flex-wrap:wrap; gap:1.5rem;
@@ -249,28 +259,7 @@
     <p class="collection-link"><a href="https://www.komoot.com/de-de/collection/4616295/-tour-de-chiemgau-2026">Alle Routen in der Komoot-Collection</a></p>
   </header>
 
-
-  <div class="card">
-    <span class="badge badge--neutral">Vorab</span>
-    <h4 class="card-title">Welches Rad &ndash; und was macht das Wetter?</h4>
-    <p>Wir sind teilweise mit dem Rennrad (Roman, Simon?) und teilweise mit Gravel (der Rest) unterwegs. Heißt: Wir sollten uns größtenteils auf asphaltierten Wegen bewegen.</p>
-    <ul class="places">
-      <li><strong>Rennrad, Samstag:</strong> Auf dem Mozartradweg (Option&nbsp;2) müssen wir auf die asphaltierte Straße ausweichen, statt den Schotter Radweg zu nehmen.</li>
-      <li><strong>Gravel, Sonntag:</strong> Am Hirschbichl (Variante&nbsp;1) lassen sich die steilsten Rampen über die Waldumfahrung umgehen &ndash; das geht aber nur mit Gravel.</li>
-    </ul>
-    <div class="note"><span class="note-icon">⛈️</span><p><strong>Wetter im Blick behalten:</strong> Aktuell sieht es am Samstag sehr warm aus, am Sonntag etwas kühler, dafür nachmittags mit Regenwahrscheinlichkeit. Es lohnt sich, am Freitag und Samstagabend nochmal <a href="https://www.bergfex.at/lofer/wetter/prognose/">die Prognose für Lofer</a> anzuschauen.</p></div>
-  </div>
-
   <div class="card card--amber">
-    <span class="badge badge--amber">Vor der Abfahrt</span>
-    <h4 class="card-title">Das müssen wir noch gemeinsam vorab entscheiden</h4>
-    <ol class="choices">
-      <li><strong>Wo starten wir und welche Bahn nehmen wir?</strong> Rosenheim (längere, sanftere Radetappe) oder Kufstein (kurz und gleich alpin).</li>
-      <li><strong>Abendessen in Lofer:</strong> selbst kochen oder essen gehen? Wenn wir kochen - wer kauft ein?</li>
-    </ol>
-  </div>
-
-    <div class="card card--amber">
     <span class="badge badge--amber">On the Road</span>
     <h4 class="card-title">Das können wir unterwegs entscheiden</h4>
     <ol class="choices">
@@ -285,8 +274,10 @@
       <div class="txt"><h2>München &rarr; Lofer</h2><p class="sub">Etappe 1 &middot; Samstag, 15. August 2026</p></div>
     </div>
 
+    <div class="note weather-note"><span class="note-icon">☀️</span><p><strong>Samstag: heiß und weitgehend trocken.</strong> Morgens starten wir bei angenehmen Temperaturen, danach wird es entlang der Strecke schnell sehr heiß: etwa 32&ndash;34&nbsp;°C in den Tälern, viel Sonne und nur schwacher Wind. Am Nachmittag können über den Bergen Quellwolken entstehen; einzelne Schauer oder Gewitter sind möglich, laut aktueller Prognose aber eher die Ausnahme. Sonnencreme und reichlich Wasser einplanen.</p></div>
+
     <h3 class="stage-title">Anreise mit dem Zug</h3>
-    <p class="lede">Wir treffen uns am Samstag am München Hbf. Ab dort kommen wir auf zwei Wegen zum Start: einmal über Rosenheim, einmal über Kufstein. Sucht euch aus, was euch lieber ist.</p>
+    <p class="lede">Wir treffen uns am Samstag um 07:30&nbsp;Uhr am Gleis 5 (bitte vorher nochmal prüfen), München Hbf und nehmen gemeinsam den RE5 um 07:43&nbsp;Uhr nach Rosenheim. Alternative, 08:53&nbsp;Uhr</p>
 
     <div class="card">
       <span class="badge badge--neutral">Tickets</span>
@@ -300,9 +291,8 @@
       <p>Das Fahrradticket ist im Deutschlandticket <em>nicht</em> enthalten, das braucht jeder zusätzlich.</p>
     </div>
 
-    <h3 class="option-title">Variante a) über Rosenheim</h3>
-    <span class="badge badge--neutral">Zug &middot; ca. 43&ndash;48&nbsp;min</span>
-    <p>Nach Rosenheim gibt's etwa einmal pro Stunde Direktverbindungen mit der RB54 oder RE5 ab München Hbf, wir wären also etwas flexibler:</p>
+    <h3 class="option-title option-title--selected">Variante a) über Rosenheim</h3>
+    <span class="badge">Entschieden &middot; RE5 um 07:43&nbsp;Uhr</span>
     <img class="plan" src="assets/images/db-muenchen-rosenheim.png" alt="DB-Fahrplan München Hbf nach Rosenheim, RB54 und RE5, Fahrzeit 43 bis 48 Minuten" width="2378" height="1388" loading="lazy" decoding="async">
     <p>Ab Rosenheim schwingen wir uns aufs Rad und radeln durch das sanfte Hügelland des Chiemgaus in Richtung Berge. Rechts blitzt kurz der Chiemsee zwischen den Hügeln durch, dann geht's stetig bergan am Fuß des Geigelstein (1808&nbsp;m) vorbei &ndash; dem Hausberg der Chiemgauer Alpen &ndash;, bevor wir nach gut zwei Stunden am Walchsee ankommen.</p>
     <div class="stat-row">
@@ -313,18 +303,20 @@
     </div>
     <div class="frame"><iframe src="https://www.komoot.com/tour/3193470915/embed?share_token=aht3hbB4EvBnN7lweGdD0qUlW7Dp46mv1x5K3qc571ObSsZniP&amp;hl=de&amp;layout=classic&amp;profile=1" width="736" height="700" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Komoot-Route Rosenheim nach Walchsee"></iframe></div>
 
-    <h3 class="option-title">Variante b) über Kufstein</h3>
-    <span class="badge badge--neutral">Zug &middot; ca. 1:21&ndash;1:55&nbsp;h</span>
-    <p>Nach Kufstein gibt es nur etwa alle 2&nbsp;h eine Direktverbindung mit der RB54 &ndash; die Fahrt dauert dann rund 1:30&nbsp;h:</p>
-    <img class="plan" src="assets/images/db-muenchen-kufstein.png" alt="DB-Fahrplan München Hbf nach Kufstein, RB54, Fahrzeit 1 Stunde 21 bis 1 Stunde 55 Minuten" width="2328" height="986" loading="lazy" decoding="async">
-    <p>Von Kufstein aus ist's mit dem Rad deutlich kürzer und bereits deutlich alpiner bis zum Walchsee. Wir fahren fast die ganze Zeit direkt am Fuß des Kaisergebirges entlang &ndash; dem markanten, schroffen Kalkstock aus Wildem und Zahmem Kaiser, der über Kufstein und Ebbs aufragt. Man bekommt hier gleich das volle Programm an Steilwänden zu sehen. Wir brauchen nur eine gute Stunde. Dafür sind die Zugzeiten weniger flexibel.</p>
-    <div class="stat-row">
-      <div class="stat"><span class="num">18,8<span class="unit">km</span></span><span class="lbl">Distanz</span></div>
-      <div class="stat"><span class="num">0:55<span class="unit">h</span></span><span class="lbl">Fahrzeit</span></div>
-      <div class="stat"><span class="num">230<span class="unit">m</span></span><span class="lbl">&uarr; Anstieg</span></div>
-      <div class="stat"><span class="num">60<span class="unit">m</span></span><span class="lbl">&darr; Abstieg</span></div>
+    <div class="option--alternative">
+      <h3 class="option-title option-title--alternative">Variante b) über Kufstein</h3>
+      <span class="badge badge--neutral">Alternative &middot; Zug ca. 1:21&ndash;1:55&nbsp;h</span>
+      <p>Nach Kufstein gibt es nur etwa alle 2&nbsp;h eine Direktverbindung mit der RB54 &ndash; die Fahrt dauert dann rund 1:30&nbsp;h:</p>
+      <img class="plan" src="assets/images/db-muenchen-kufstein.png" alt="DB-Fahrplan München Hbf nach Kufstein, RB54, Fahrzeit 1 Stunde 21 bis 1 Stunde 55 Minuten" width="2328" height="986" loading="lazy" decoding="async">
+      <p>Von Kufstein aus ist's mit dem Rad deutlich kürzer und bereits deutlich alpiner bis zum Walchsee. Wir fahren fast die ganze Zeit direkt am Fuß des Kaisergebirges entlang &ndash; dem markanten, schroffen Kalkstock aus Wildem und Zahmem Kaiser, der über Kufstein und Ebbs aufragt. Man bekommt hier gleich das volle Programm an Steilwänden zu sehen. Wir brauchen nur eine gute Stunde. Dafür sind die Zugzeiten weniger flexibel.</p>
+      <div class="stat-row">
+        <div class="stat"><span class="num">18,8<span class="unit">km</span></span><span class="lbl">Distanz</span></div>
+        <div class="stat"><span class="num">0:55<span class="unit">h</span></span><span class="lbl">Fahrzeit</span></div>
+        <div class="stat"><span class="num">230<span class="unit">m</span></span><span class="lbl">&uarr; Anstieg</span></div>
+        <div class="stat"><span class="num">60<span class="unit">m</span></span><span class="lbl">&darr; Abstieg</span></div>
+      </div>
+      <div class="frame"><iframe src="https://www.komoot.com/tour/3185431425/embed?share_token=alrhqcwBzM6AURcJ6mGDNVl0WEGjSobhlj2fA4iu47AbEVqMVe&amp;hl=de&amp;layout=classic&amp;profile=1" width="736" height="700" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Komoot-Route Kufstein nach Walchsee"></iframe></div>
     </div>
-    <div class="frame"><iframe src="https://www.komoot.com/tour/3185431425/embed?share_token=alrhqcwBzM6AURcJ6mGDNVl0WEGjSobhlj2fA4iu47AbEVqMVe&amp;hl=de&amp;layout=classic&amp;profile=1" width="736" height="700" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Komoot-Route Kufstein nach Walchsee"></iframe></div>
 
     <p>Von beiden Bahnhöfen aus kommen wir entspannt und malerisch zum Walchsee, sodass wir so gegen Mittag (ca. 12&nbsp;Uhr) dort aufschlagen und einen kleinen Bade- und/oder Lunch-Stop machen können.</p>
 
@@ -365,23 +357,25 @@
     <div class="frame"><iframe src="https://www.komoot.com/tour/3185438549/embed?share_token=aJcBvgZdLGMAIjvbm38IbFJl3cbYalw8fQgy9rCfq2vu7Oiq1p&amp;hl=de&amp;layout=classic&amp;profile=1" width="736" height="700" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Komoot-Route Walchsee nach Lofer, über St. Johann und Pillersee"></iframe></div>
     <h4 class="card-subtitle">Zeitplan-Vorschlag für den Samstag</h4>
     <p>Die Komoot-Zeiten oben sind reine Fahrzeiten. Mit kurzen Stopps und dem üblichen Sammeln nach Abzweigungen sollten wir etwa 20&ndash;30&nbsp;% Puffer einplanen. Damit brauchen wir von Rosenheim zum Walchsee realistisch rund 2:45&ndash;3:00&nbsp;h, von Kufstein etwa 1:10&ndash;1:25&nbsp;h. Für die Weiterfahrt nach Lofer sind es je nach Route ungefähr 2:00&ndash;2:20&nbsp;h direkt, 2:40&ndash;3:00&nbsp;h über Griesnau oder 3:45&ndash;4:15&nbsp;h über den Pillersee.</p>
-    <p><strong>Option Rosenheim:</strong></p>
+    <p><span class="badge">Unser Zeitplan &middot; Rosenheim</span></p>
     <ul class="timeline">
-      <li><span class="t">08:30</span><span class="ev"><strong>Treffpunkt</strong> am Holzkirchner Flügelbahnhof, München Hbf Gleis 5&ndash;10</span></li>
-      <li><span class="t">08:43</span><span class="ev">RE5 ab München &rarr; an Rosenheim 09:26</span></li>
-      <li><span class="t">ca. 09:40</span><span class="ev">Abfahrt in Rosenheim</span></li>
+      <li><span class="t">07:30</span><span class="ev"><strong>Treffpunkt</strong> am Holzkirchner Flügelbahnhof, München Hbf Gleis 5&ndash;10</span></li>
+      <li><span class="t">07:43</span><span class="ev"><strong>RE5 ab München</strong> &rarr; an Rosenheim 08:26</span></li>
+      <li><span class="t">ca. 08:40</span><span class="ev">Abfahrt mit dem Rad in Rosenheim</span></li>
     </ul>
-    <p><strong>Option Kufstein:</strong></p>
+    <div class="option--alternative">
+      <p><strong>Alternative zum Vergleich: Kufstein</strong></p>
+      <ul class="timeline">
+        <li><span class="t">08:30</span><span class="ev"><strong>Treffpunkt</strong> am Holzkirchner Flügelbahnhof, München Hbf Gleis 5&ndash;10</span></li>
+        <li><span class="t">09:36</span><span class="ev">RB54 ab München &rarr; an Kufstein 11:07</span></li>
+        <li><span class="t">ca. 11:20</span><span class="ev">Abfahrt in Kufstein</span></li>
+      </ul>
+    </div>
+    <p>Mit unserem früheren Start in Rosenheim sollten wir gegen Mittag am Walchsee ankommen:</p>
     <ul class="timeline">
-      <li><span class="t">08:30</span><span class="ev"><strong>Treffpunkt</strong> am Holzkirchner Flügelbahnhof, München Hbf Gleis 5&ndash;10</span></li>
-      <li><span class="t">09:36</span><span class="ev">RB54 ab München &rarr; an Kufstein 11:07</span></li>
-      <li><span class="t">ca. 11:20</span><span class="ev">Abfahrt in Kufstein</span></li>
-    </ul>
-    <p>Mit beiden Varianten sollten wir ungefähr gleichzeitig am Walchsee ankommen:</p>
-    <ul class="timeline">
-      <li><span class="t">12:15&ndash;12:30</span><span class="ev">Alle am Walchsee &ndash; Baden, Brotzeit, Füße hochlegen</span></li>
-      <li><span class="t">ca. 13:15</span><span class="ev">Weiterfahrt nach Lofer</span></li>
-      <li><span class="t">15:30&ndash;17:30</span><span class="ev">Ankunft Lofer, je nach gewählter Route; mit längerer Pause oder Panne spätestens gegen 18&nbsp;Uhr</span></li>
+      <li><span class="t">11:30&ndash;12:00</span><span class="ev">Ankunft am Walchsee &ndash; Baden, Brotzeit, Füße hochlegen</span></li>
+      <li><span class="t">ca. 12:45</span><span class="ev">Weiterfahrt nach Lofer</span></li>
+      <li><span class="t">15:00&ndash;17:00</span><span class="ev">Ankunft Lofer, je nach gewählter Route; mit längerer Pause oder Panne spätestens gegen 18&nbsp;Uhr</span></li>
       <li><span class="t">20:00</span><span class="ev">Abendessen</span></li>
     </ul>
 
@@ -398,10 +392,10 @@
       <h4 class="card-title">Essen &amp; Einkaufen in Lofer</h4>
       <p>Kleines Problem: Samstag ist Maria Himmelfahrt, also Feiertag in Bayern und Österreich. Die Supermärkte in Lofer haben da nur bis 13&nbsp;Uhr auf &ndash; für uns leider zu früh. Ich seh zwei Möglichkeiten:</p>
       <ol class="choices">
-        <li><strong>Freitags einkaufen und kochen:</strong> Wir kaufen schon in München ein und verteilen das Zeug auf die Räder, dann kochen wir abends zusammen. Vorteil: gemütliches Kochen in großer Runde. Nachteil: Wir schleppen das den ganzen Tag mit uns rum und der Speiseplan ist auf hitzefestes Essen limitiert.</li>
-        <li><strong>Abends essen gehen in Lofer:</strong> Der Ort ist klein, aber es gibt genug Auswahl &ndash; siehe die Liste unten.</li>
+        <li class="choice--alternative"><strong>Alternative &ndash; freitags einkaufen und kochen:</strong> Wir kaufen schon in München ein und verteilen das Zeug auf die Räder, dann kochen wir abends zusammen. Vorteil: gemütliches Kochen in großer Runde. Nachteil: Wir schleppen das den ganzen Tag mit uns rum und der Speiseplan ist auf hitzefestes Essen limitiert.</li>
+        <li class="choice--selected"><strong>Entschieden &ndash; abends essen gehen in Lofer:</strong> Der Ort ist klein, aber es gibt genug Auswahl &ndash; siehe die Liste unten.</li>
       </ol>
-      <div class="note"><span class="note-icon">🗳️</span><p><strong>Noch zu entscheiden:</strong> Selbst kochen (Zutaten mitnehmen) oder abends essen gehen? Bitte in der Gruppe abstimmen.</p></div>
+      <div class="note note--decided"><span class="note-icon">✓</span><p><strong>Entschieden:</strong> Wir gehen abends gemeinsam essen. Ein Restaurant müssen wir noch auswählen und reservieren.</p></div>
       <h5 class="card-subtitle">Wo wir essen gehen könnten</h5>
       <ul class="places">
         <li><strong><a href="https://www.gasthof-lofer.com/de/restaurant/">Forellenstube im Gasthaus Lofer</a></strong> &ndash; klassisches Wirtshaus, Spezialität sind Forellen aus der Region. Warme Küche 17:30&ndash;20:30&nbsp;Uhr, Samstag offen (Ruhetage Di/Mi). Kartenzahlung erst ab 50&nbsp;&euro;, also Bargeld einstecken. Tel. <a href="tel:+4365888377">+43 6588 8377</a></li>
@@ -422,6 +416,8 @@
       <span class="num">02</span>
       <div class="txt"><h2>Lofer &rarr; Salzburg</h2><p class="sub">Etappe 2 &middot; Sonntag, 16. August 2026</p></div>
     </div>
+
+    <div class="note weather-note weather-note--wet"><span class="note-icon">⛈️</span><p><strong>Sonntag: warm, schwül und zunehmend gewittrig.</strong> Vormittags gibt es noch sonnige Abschnitte bei rund 17&ndash;25&nbsp;°C. Spätestens am Nachmittag steigt bei Höchstwerten um 27&ndash;30&nbsp;°C das Risiko für Schauer und Gewitter deutlich an; örtlich sind kräftige Böen möglich. Deshalb früh losfahren, Regenjacke griffbereit halten und vor dem Hirschbichl die aktuelle Entwicklung prüfen.</p></div>
 
     <h3 class="stage-title">Über den Königssee</h3>
     <p class="lede">Nach dem Frühstück geht's in Richtung Königssee und Salzburg. Ich hab dafür zwei Routen-Optionen zusammengebastelt.</p>
@@ -493,12 +489,10 @@
       <h4 class="card-title">Gemeinsame Packliste</h4>
       <p class="checklist-progress" data-progress-for="gemeinsam" aria-live="polite"></p>
       <ul class="checklist" data-list="gemeinsam">
-        <li><label><input type="checkbox" data-key="gemeinsam-fahrradschloss"><span class="txt">Fahrradschloss</span></label></li>
-        <li><label><input type="checkbox" data-key="gemeinsam-abendessen"><span class="txt">ggf. Zutaten fürs Abendessen</span></label></li>
-        <li><label><input type="checkbox" data-key="gemeinsam-fruehstueck"><span class="txt">ggf. Frühstück</span></label></li>
-        <li><label><input type="checkbox" data-key="gemeinsam-erste-hilfe"><span class="txt">Erste-Hilfe-Kit</span></label></li>
-        <li><label><input type="checkbox" data-key="gemeinsam-luftpumpe"><span class="txt">Luftpumpe (1&ndash;2 reichen für die Gruppe)</span></label></li>
-        <li><label><input type="checkbox" data-key="gemeinsam-werkzeug"><span class="txt">Multitool &amp; Reifenheber</span></label></li>
+        <li><label><input type="checkbox" data-key="gemeinsam-fahrradschloss"><span class="txt">Fahrradschloss &ndash; Basti</span></label></li>
+        <li><label><input type="checkbox" data-key="gemeinsam-erste-hilfe"><span class="txt">Erste-Hilfe-Kit &ndash; Roman</span></label></li>
+        <li><label><input type="checkbox" data-key="gemeinsam-luftpumpe"><span class="txt">Luftpumpe &ndash; Luis, Basti &amp; Roman</span></label></li>
+        <li><label><input type="checkbox" data-key="gemeinsam-werkzeug"><span class="txt">Minitool &amp; Reifenheber &ndash; Luis, Basti &amp; Roman</span></label></li>
         <li><label><input type="checkbox" data-key="gemeinsam-kartenspiele"><span class="txt">Kartenspiele</span></label></li>
       </ul>
     </div>
