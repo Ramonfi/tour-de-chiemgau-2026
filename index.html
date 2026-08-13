@@ -106,6 +106,7 @@
     font-family:'Big Shoulders Display'; font-weight:700; font-size:1.2rem;
     color:var(--ink-soft); margin:.9rem 0 0;
   }
+  header .collection-link{position:relative; z-index:1; margin:.8rem 0 0; font-size:.95rem;}
   .meta-row{
     position:relative; z-index:1;
     display:flex; flex-wrap:wrap; gap:.9rem 1.6rem; align-items:baseline;
@@ -245,35 +246,29 @@
     </svg>
     <h1>Tour de&nbsp;Chiemgau</h1>
     <p class="dates">15.&ndash;16. August 2026</p>
-    <div class="meta-row">
-      <div class="meta-item"><span class="lbl">Gesamt</span><span class="val">130&ndash;177&nbsp;km</span></div>
-      <div class="meta-item"><span class="lbl">Höhenmeter</span><span class="val">ca. 1.400&ndash;1.900&nbsp;m</span></div>
-      <div class="meta-item"><span class="lbl">Etappen</span><span class="val">2 Tage, 1 Übernachtung</span></div>
-      <div class="meta-item"><span class="lbl">Start &amp; Ziel</span><span class="val">München Hbf</span></div>
-    </div>
+    <p class="collection-link"><a href="https://www.komoot.com/de-de/collection/4616295/-tour-de-chiemgau-2026">Alle Routen in der Komoot-Collection</a></p>
   </header>
 
   <div class="card card--amber">
     <span class="badge badge--amber">Vor der Abfahrt</span>
     <h4 class="card-title">Das müssen wir noch gemeinsam entscheiden</h4>
-    <p>Vier offene Punkte &ndash; bitte in der Gruppe abstimmen, damit wir Samstag früh nicht am Bahnsteig diskutieren:</p>
     <ol class="choices">
-      <li><strong>Wo steigen wir aus?</strong> Rosenheim (längere, sanftere Radetappe) oder Kufstein (kurz und gleich alpin).</li>
-      <li><strong>Welche Route zum Walchsee weiter nach Lofer?</strong> Direkt, über den Mozartradweg oder die lange Variante über den Pillersee.</li>
-      <li><strong>Abendessen in Lofer:</strong> selbst kochen oder essen gehen &ndash; wer essen gehen will, muss reservieren.</li>
+      <li><strong>Wo starten wir?</strong> Rosenheim (längere, sanftere Radetappe) oder Kufstein (kurz und gleich alpin).</li>
+      <li><strong>Welche Route zum Walchsee weiter nach Lofer?</strong> Direkt, über den Mozartradweg oder die lange Variante über den Pillersee. (Können wir auch erst am Walchsee entscheiden)</li>
+      <li><strong>Abendessen in Lofer:</strong> selbst kochen oder essen gehen? Wenn wir kochen - wer kauft ein?</li>
       <li><strong>Sonntag:</strong> Hirschbichl-Pass oder die flachere Talvariante.</li>
     </ol>
   </div>
 
   <div class="card">
-    <span class="badge badge--neutral">Vorbereitung</span>
+    <span class="badge badge--neutral">Vorab</span>
     <h4 class="card-title">Welches Rad &ndash; und was macht das Wetter?</h4>
-    <p>Wir sind teilweise mit dem Rennrad (Roman, Simon?) und teilweise mit Gravel unterwegs. Heißt: Wir sollten uns größtenteils auf asphaltierten Wegen bewegen.</p>
+    <p>Wir sind teilweise mit dem Rennrad (Roman, Simon?) und teilweise mit Gravel (der Rest) unterwegs. Heißt: Wir sollten uns größtenteils auf asphaltierten Wegen bewegen.</p>
     <ul class="places">
-      <li><strong>Rennrad, Samstag:</strong> Auf dem Mozartradweg (Option&nbsp;2) müssen wir auf die asphaltierte Straße ausweichen, statt den Schotter mitzunehmen.</li>
+      <li><strong>Rennrad, Samstag:</strong> Auf dem Mozartradweg (Option&nbsp;2) müssen wir auf die asphaltierte Straße ausweichen, statt den Schotter Radweg zu nehmen.</li>
       <li><strong>Gravel, Sonntag:</strong> Am Hirschbichl (Variante&nbsp;1) lassen sich die steilsten Rampen über die Waldumfahrung umgehen &ndash; das geht aber nur mit Gravel.</li>
     </ul>
-    <div class="note"><span class="note-icon">⛈️</span><p><strong>Wetter im Blick behalten:</strong> August in den Alpen heißt Nachmittagsgewitter. Aktuell sieht es am Samstag sehr warm aus, am Sonntag etwas kühler, dafür nachmittags mit Regenwahrscheinlichkeit. Es lohnt sich, am Freitag und Samstagabend nochmal <a href="https://www.bergfex.at/lofer/wetter/prognose/">die Prognose für Lofer</a> anzuschauen.</p></div>
+    <div class="note"><span class="note-icon">⛈️</span><p><strong>Wetter im Blick behalten:</strong> Aktuell sieht es am Samstag sehr warm aus, am Sonntag etwas kühler, dafür nachmittags mit Regenwahrscheinlichkeit. Es lohnt sich, am Freitag und Samstagabend nochmal <a href="https://www.bergfex.at/lofer/wetter/prognose/">die Prognose für Lofer</a> anzuschauen.</p></div>
   </div>
 
   <section class="day">
@@ -314,7 +309,7 @@
     <span class="badge badge--neutral">Zug &middot; ca. 1:21&ndash;1:55&nbsp;h</span>
     <p>Nach Kufstein gibt es nur etwa alle 2&nbsp;h eine Direktverbindung mit der RB54 &ndash; die Fahrt dauert dann rund 1:30&nbsp;h:</p>
     <img class="plan" src="assets/images/db-muenchen-kufstein.png" alt="DB-Fahrplan München Hbf nach Kufstein, RB54, Fahrzeit 1 Stunde 21 bis 1 Stunde 55 Minuten" width="2328" height="986" loading="lazy" decoding="async">
-    <p>Von Kufstein aus ist's mit dem Rad deutlich kürzer und bereits deutlich alpiner bis zum Walchsee. Wir fahren fast die ganze Zeit direkt am Fuß des Kaisergebirges entlang &ndash; dem markanten, schroffen Kalkstock aus Wildem und Zahmem Kaiser, der über Kufstein und Ebbs aufragt. Wer noch nie in den Alpen war, bekommt hier gleich das volle Programm an Steilwänden zu sehen. Wir brauchen nur eine gute Stunde. Dafür sind die Zugzeiten weniger flexibel.</p>
+    <p>Von Kufstein aus ist's mit dem Rad deutlich kürzer und bereits deutlich alpiner bis zum Walchsee. Wir fahren fast die ganze Zeit direkt am Fuß des Kaisergebirges entlang &ndash; dem markanten, schroffen Kalkstock aus Wildem und Zahmem Kaiser, der über Kufstein und Ebbs aufragt. Man bekommt hier gleich das volle Programm an Steilwänden zu sehen. Wir brauchen nur eine gute Stunde. Dafür sind die Zugzeiten weniger flexibel.</p>
     <div class="stat-row">
       <div class="stat"><span class="num">18,8<span class="unit">km</span></span><span class="lbl">Distanz</span></div>
       <div class="stat"><span class="num">0:55<span class="unit">h</span></span><span class="lbl">Fahrzeit</span></div>
@@ -361,18 +356,18 @@
     </div>
     <div class="frame"><iframe src="https://www.komoot.com/tour/3185438549/embed?share_token=aJcBvgZdLGMAIjvbm38IbFJl3cbYalw8fQgy9rCfq2vu7Oiq1p&amp;hl=de&amp;layout=classic&amp;profile=1" width="736" height="700" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Komoot-Route Walchsee nach Lofer, über St. Johann und Pillersee"></iframe></div>
     <h4 class="card-subtitle">Zeitplan-Vorschlag für den Samstag</h4>
-    <p>Die Komoot-Zeiten oben sind reine Fahrzeiten. Mit einer größeren Gruppe, kurzen Stopps und dem üblichen Sammeln nach Abzweigungen sollten wir etwa 20&ndash;30&nbsp;% Puffer einplanen. Damit brauchen wir von Rosenheim zum Walchsee realistisch rund 2:45&ndash;3:00&nbsp;h, von Kufstein etwa 1:10&ndash;1:25&nbsp;h. Für die Weiterfahrt nach Lofer sind es je nach Route ungefähr 2:00&ndash;2:20&nbsp;h direkt, 2:40&ndash;3:00&nbsp;h über Griesnau oder 3:45&ndash;4:15&nbsp;h über den Pillersee.</p>
+    <p>Die Komoot-Zeiten oben sind reine Fahrzeiten. Mit kurzen Stopps und dem üblichen Sammeln nach Abzweigungen sollten wir etwa 20&ndash;30&nbsp;% Puffer einplanen. Damit brauchen wir von Rosenheim zum Walchsee realistisch rund 2:45&ndash;3:00&nbsp;h, von Kufstein etwa 1:10&ndash;1:25&nbsp;h. Für die Weiterfahrt nach Lofer sind es je nach Route ungefähr 2:00&ndash;2:20&nbsp;h direkt, 2:40&ndash;3:00&nbsp;h über Griesnau oder 3:45&ndash;4:15&nbsp;h über den Pillersee.</p>
     <p><strong>Option Rosenheim:</strong></p>
     <ul class="timeline">
       <li><span class="t">08:30</span><span class="ev"><strong>Treffpunkt</strong> am Holzkirchner Flügelbahnhof, München Hbf Gleis 5&ndash;10</span></li>
       <li><span class="t">08:43</span><span class="ev">RE5 ab München &rarr; an Rosenheim 09:26</span></li>
-      <li><span class="t">ca. 09:40</span><span class="ev">Abfahrt in Rosenheim, sobald alle Räder ausgeladen sind</span></li>
+      <li><span class="t">ca. 09:40</span><span class="ev">Abfahrt in Rosenheim</span></li>
     </ul>
     <p><strong>Option Kufstein:</strong></p>
     <ul class="timeline">
       <li><span class="t">08:30</span><span class="ev"><strong>Treffpunkt</strong> am Holzkirchner Flügelbahnhof, München Hbf Gleis 5&ndash;10</span></li>
       <li><span class="t">09:36</span><span class="ev">RB54 ab München &rarr; an Kufstein 11:07</span></li>
-      <li><span class="t">ca. 11:20</span><span class="ev">Abfahrt in Kufstein, sobald alle Räder ausgeladen sind</span></li>
+      <li><span class="t">ca. 11:20</span><span class="ev">Abfahrt in Kufstein</span></li>
     </ul>
     <p>Mit beiden Varianten sollten wir ungefähr gleichzeitig am Walchsee ankommen:</p>
     <ul class="timeline">
@@ -393,9 +388,9 @@
     <div class="card card--amber">
       <span class="badge badge--amber">Verpflegung</span>
       <h4 class="card-title">Essen &amp; Einkaufen in Lofer</h4>
-      <p>Kleines Problem: Samstag ist Maria Himmelfahrt, also Feiertag in Bayern und Österreich. Die Supermärkte in Lofer haben da nur bis 13&nbsp;Uhr auf &ndash; für uns leider zu früh. Sonntag sollten sie dann ab 09:00 Uhr offen sein. Ich seh zwei Möglichkeiten:</p>
+      <p>Kleines Problem: Samstag ist Maria Himmelfahrt, also Feiertag in Bayern und Österreich. Die Supermärkte in Lofer haben da nur bis 13&nbsp;Uhr auf &ndash; für uns leider zu früh. Ich seh zwei Möglichkeiten:</p>
       <ol class="choices">
-        <li><strong>Selbst einkaufen und kochen:</strong> Wir kaufen schon in München ein und verteilen das Zeug auf die Räder, dann kochen wir abends zusammen. Vorteil: gemütliches Kochen in großer Runde. Nachteil: Wir schleppen das den ganzen Tag mit uns rum und der Speiseplan ist auf hitzefestes Essen limitiert.</li>
+        <li><strong>Freitags einkaufen und kochen:</strong> Wir kaufen schon in München ein und verteilen das Zeug auf die Räder, dann kochen wir abends zusammen. Vorteil: gemütliches Kochen in großer Runde. Nachteil: Wir schleppen das den ganzen Tag mit uns rum und der Speiseplan ist auf hitzefestes Essen limitiert.</li>
         <li><strong>Abends essen gehen in Lofer:</strong> Der Ort ist klein, aber es gibt genug Auswahl &ndash; siehe die Liste unten.</li>
       </ol>
       <div class="note"><span class="note-icon">🗳️</span><p><strong>Noch zu entscheiden:</strong> Selbst kochen (Zutaten mitnehmen) oder abends essen gehen? Bitte in der Gruppe abstimmen.</p></div>
@@ -421,12 +416,12 @@
     </div>
 
     <h3 class="stage-title">Über den Königssee</h3>
-    <p class="lede">Nach dem Frühstück geht's los Richtung Königssee und Salzburg. Ich hab dafür zwei Routen zusammengebastelt.</p>
+    <p class="lede">Nach dem Frühstück geht's in Richtung Königssee und Salzburg. Ich hab dafür zwei Routen-Optionen zusammengebastelt.</p>
 
     <h3 class="option-title">Variante 1 &ndash; über den Hirschbichl-Pass</h3>
     <span class="badge">Rad &middot; steil, autofrei</span>
     <p>Der Hirschbichl ist eine für den normalen Autoverkehr gesperrte, asphaltierte Passstraße, auf der allerdings der Wanderbus unterwegs ist. Die Südauffahrt ab Weißbach ist auf 7,1&nbsp;km mit 558&nbsp;Höhenmetern und durchschnittlich 7,9&nbsp;% schon insgesamt anspruchsvoll. Laut <a href="https://www.quaeldich.de/paesse/hirschbichl/#auffahrten">Quäldich</a> kommen dazu mehrere Passagen mit 12&ndash;15&nbsp;% und kurz vor dem Pass eine etwa 300&ndash;400&nbsp;m lange Rampe, die mit 25 bis 30&nbsp;% angegeben ist.</p>
-    <p>Die Strecke ist grundsätzlich auch mit dem Rennrad fahrbar, aber ob wir die steilsten Rampen wirklich hochfahren, hängt stark von der individuellen Fitness und vor allem von der Übersetzung am Rad ab. Eine Übersetzung um 1:1 oder leichter hilft deutlich; mit einer klassischen Rennradübersetzung kann selbst für fitte Fahrer eine kurze Schiebepassage realistischer sein. Das ist völlig okay und sollte bei der Zeitplanung einkalkuliert werden. Mit dem Gravelbike lässt sich die steilste Rampe laut einem Kumpel durch den Wald umfahren, darauf sollten wir uns für die ganze Gruppe aber nicht verlassen. Auf der schmalen Abfahrt müssen wir außerdem wegen Wanderern, Kühen und dem Wanderbus vorsichtig sein.</p>
+    <p>Die Strecke ist grundsätzlich mit dem Rennrad fahrbar, aber ob wir die steilsten Rampen wirklich hochkommen, hängt stark von der individuellen Fitness und vor allem von der Übersetzung am Rad ab. Eine Übersetzung um 1:1 oder leichter hilft deutlich; mit einer klassischen Rennradübersetzung kann selbst für fitte Fahrer eine kurze Schiebepassage realistischer sein. Mit dem Gravelbike lässt sich die steilste Rampe laut einem Kumpel durch den Wald umfahren - Mit Gepäck und Rennrad wird das eher nichts. Auf der schmalen Abfahrt müssen wir außerdem wegen Wanderern, Kühen und dem Wanderbus vorsichtig sein.</p>
     <p>Dafür bekommen wir auf dem Pass (1152&nbsp;m) die Loferer Steinberge nochmal von der anderen Seite zu sehen und blicken hinüber zur Reiter Alm, einem großen Bergplateau. Auf der Abfahrt geht's mitten ins Berchtesgadener Land hinein, wo schon bald der Watzmann (2713&nbsp;m) &ndash; Deutschlands dritthöchster Berg und das Postkartenmotiv der Region &ndash; über den Baumwipfeln auftaucht.</p>
     <div class="stat-row">
       <div class="stat"><span class="num">73,7<span class="unit">km</span></span><span class="lbl">bis Freilassing</span></div>
@@ -450,7 +445,7 @@
 
     <h3 class="stage-title">Königssee, Berchtesgaden &amp; Salzburg</h3>
     <p>Beide Routen treffen sich am Königssee, direkt am Fuß des Watzmanns. Da können wir uns, wenn wir Bock haben, unter die Touristenmassen mischen und einmal in den See hüpfen &ndash; das smaragdgrüne Wasser und die Kulisse sind schon beeindruckend, auch wenn's touristisch ist. Die berühmte Kirche St.&nbsp;Bartholomä mit den roten Zwiebeltürmen liegt allerdings nur per Boot erreichbar auf der anderen Seite des Sees. Mehr gibt's da meiner Meinung nach aber auch nicht zu sehen.</p>
-    <p>Von dort geht's weiter nach Berchtesgaden und zurück Richtung Österreich. Wir kommen am Obersalzberg vorbei und an der Roßfeld Panoramastraße, die sich oberhalb von uns entlang der Grenze schlängelt. Danach folgen wir mehr oder weniger der Berchtesgadener Ache Richtung Salzburg, während der Untersberg &ndash; der Hausberg von Salzburg &ndash; langsam vor uns aufwächst.</p>
+    <p>Von dort geht's weiter nach Berchtesgaden und zurück Richtung Österreich. Wir kommen am Obersalzberg und an der Roßfeld Panoramastraße vorbei. Danach folgen wir mehr oder weniger der Berchtesgadener Ache Richtung Salzburg, während der Untersberg &ndash; der Hausberg von Salzburg &ndash; langsam vor uns aufwächst.</p>
     <p>Auf dem Weg nach Salzburg können wir noch kurz beim Almkanal vorbeischauen &ndash; ein künstlicher Kanal, in dem die Salzburger floaten und baden gehen, quasi ihr Eisbach. Achtung, das Wasser ist eiskalt!</p>
     <p>Und dann sind wir auch schon in Salzburg. Da können wir nochmal auftanken, Zucker und Akku, und einfach die Seele baumeln lassen.</p>
 
@@ -493,7 +488,7 @@
         <li><label><input type="checkbox" data-key="gemeinsam-fahrradschloss"><span class="txt">Fahrradschloss</span></label></li>
         <li><label><input type="checkbox" data-key="gemeinsam-abendessen"><span class="txt">ggf. Zutaten fürs Abendessen</span></label></li>
         <li><label><input type="checkbox" data-key="gemeinsam-fruehstueck"><span class="txt">ggf. Frühstück</span></label></li>
-        <li><label><input type="checkbox" data-key="gemeinsam-erste-hilfe"><span class="txt">Erste-Hilfe-Kit (Roman)</span></label></li>
+        <li><label><input type="checkbox" data-key="gemeinsam-erste-hilfe"><span class="txt">Erste-Hilfe-Kit</span></label></li>
         <li><label><input type="checkbox" data-key="gemeinsam-luftpumpe"><span class="txt">Luftpumpe (1&ndash;2 reichen für die Gruppe)</span></label></li>
         <li><label><input type="checkbox" data-key="gemeinsam-werkzeug"><span class="txt">Multitool &amp; Reifenheber</span></label></li>
         <li><label><input type="checkbox" data-key="gemeinsam-kartenspiele"><span class="txt">Kartenspiele</span></label></li>
@@ -507,16 +502,15 @@
       <ul class="checklist" data-list="jeder">
         <li><label><input type="checkbox" data-key="jeder-sonnencreme"><span class="txt">Sonnencreme</span></label></li>
         <li><label><input type="checkbox" data-key="jeder-helm"><span class="txt">Helm</span></label></li>
-        <li><label><input type="checkbox" data-key="jeder-schlauch"><span class="txt">Ersatzschlauch (passend zu <em>deinem</em> Rad) &amp; Flickzeug</span></label></li>
-        <li><label><input type="checkbox" data-key="jeder-handtuch"><span class="txt">Handtuch (wir haben drei Badestopps eingeplant)</span></label></li>
-        <li><label><input type="checkbox" data-key="jeder-powerbank"><span class="txt">Powerbank &amp; Ladekabel (Navigation frisst Akku)</span></label></li>
-        <li><label><input type="checkbox" data-key="jeder-licht"><span class="txt">Fahrradlicht (Sonntag kann's spät werden)</span></label></li>
+        <li><label><input type="checkbox" data-key="jeder-schlauch"><span class="txt">Ersatzschlauch &amp; Flickzeug</span></label></li>
+        <li><label><input type="checkbox" data-key="jeder-handtuch"><span class="txt">Badetuch</span></label></li>
+        <li><label><input type="checkbox" data-key="jeder-licht"><span class="txt">Fahrradlicht</span></label></li>
         <li><label><input type="checkbox" data-key="jeder-ausweis"><span class="txt">Ausweis (Achtung Grenzkontrollen)</span></label></li>
         <li><label><input type="checkbox" data-key="jeder-regenjacke"><span class="txt">ggf. Regenjacke</span></label></li>
-        <li><label><input type="checkbox" data-key="jeder-badesachen"><span class="txt">Badesachen</span></label></li>
-        <li><label><input type="checkbox" data-key="jeder-bargeld"><span class="txt">Bargeld (Bäckerei, kleine Läden, evtl. keine Kartenzahlung)</span></label></li>
+        <li><label><input type="checkbox" data-key="jeder-badesachen"><span class="txt">Badehose</span></label></li>
+        <li><label><input type="checkbox" data-key="jeder-bargeld"><span class="txt">Bargeld</span></label></li>
         <li><label><input type="checkbox" data-key="jeder-wasserflaschen"><span class="txt">Wasserflaschen</span></label></li>
-        <li><label><input type="checkbox" data-key="jeder-traubenzucker"><span class="txt">Traubenzucker / Riegel</span></label></li>
+        <li><label><input type="checkbox" data-key="jeder-traubenzucker"><span class="txt">Traubenzucker / Riegel / Snacks für unterwegs</span></label></li>
       </ul>
     </div>
 
